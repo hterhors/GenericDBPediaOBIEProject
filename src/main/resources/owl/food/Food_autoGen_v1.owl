@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+ <owl:Class rdf:about="http://dbpedia.org/ontology/Eukaryote"/>
+
+	<owl:Class rdf:about="http://dbpedia.org/ontology/Food"/>
+
+	<owl:Class rdf:about="http://dbpedia.org/ontology/Person"/>
+
+	<owl:Class rdf:about="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+   
+   
+<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/ingredient">
+        
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Food"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/creatorOfDish">
+        
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Food"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/hasVariant">
+        
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Food"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Food"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/origin">
+        
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Food"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+	</owl:ObjectProperty>
+
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatype Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+     
+     
+<owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/alias">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+		<rdfs:domain rdf:resource="http://dbpedia.org/ontology/Food"/>
+	</owl:DatatypeProperty>
+  
+      
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Named Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+     
+     
+<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mayonnaise">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Japan">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Burasa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Siomay">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rice">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chocolate">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Khaman">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Georgia_(country)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sesame">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nougat">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Black-eyed_pea">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/France">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pincho">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Candied_fruit">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Edible_mushroom">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Slavink">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bremer_Klaben">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shrimp">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Egg_(food)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bulla_cake">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rice_flour">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Orange_cuttlefish">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cinnamon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cuttlefish">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Veal">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/New_Zealand">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Guangdong">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Garlic">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+		<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Indonesian_cuisine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chaozhou">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rice_noodle_roll">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Zarangollo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Leavening_agent">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vegetable">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Butter">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lincolnshire_sausage">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sisig">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lucia_Cunanan">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Brown_sugar">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vanilla">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lekach">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Peanut_soup">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rose_hip">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Aceh">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Batagor">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cucumber">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Turkey">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Soy_sauce">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/La_Mancha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Provence">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nasi_timbel">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Salt">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bread">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apple_crisp">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Candy_corn">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Food_coloring">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dried_fruit">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Banana_leaf">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cheese">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Baker's_yeast">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vicia_faba">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Alkali">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Marjoram">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tahu_goreng">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Molasses">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bacon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Egg_yolk">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/China">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pork">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+		<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tofu">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ham">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Moin_moin">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hong_Kong_cuisine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blackcurrant">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gado-gado">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vegetable_oil">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gujarat">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Almond">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apple">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sesame_oil">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/United_States">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Allspice">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fennel">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Frankfurt">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rum">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Anise">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Batter_(cooking)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Russia">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dhokla">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Krupuk">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Capsicum">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Welf_pudding">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chipolata">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hong_Kong">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gozinaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bremen">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Region_of_Murcia">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chile">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+		<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Korea">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Zante_currant">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Peanut_sauce">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Italian_sausage">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Europe">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chickpea">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Flour">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cumin">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Karedok">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apricot">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Meat">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Anchovy">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rempeyek">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/African_cuisine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cherry">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Laren">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lamb_and_mutton">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cheese_roll">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Coenraad_Johannes_van_Houten">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nutmeg">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Germany">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eggplant">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Zest_(ingredient)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Zopf">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lontong">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Walnut">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lemon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hazelnut">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Somalia">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dripping">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Parsley">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/White_wine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jamaica">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Malaysia">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pampanga">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Potato">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shumai">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lincolnshire">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/India">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Great_Britain">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nigeria">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Noppe">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cotton_candy">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Deuk_Deuk_Tong">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Brittle_(food)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sweden">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sabaayad">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kimchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Spain">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Basbousa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kimchijeon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Australia">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hefekranz">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Honey">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ratatouille">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rice_noodles">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Milk">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sundanese_cuisine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/West_Java">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ginger">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Beef">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+		<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/William_Morrison_(dentist)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cream">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sponge_cake">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Zucchini">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chili_pepper">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Oat">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ful_medames">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Strawberry_Jam">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dutch_process_chocolate">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Peanut">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Coriander">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Alinazik_kebab">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bell_pepper">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fios_de_ovos">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Onion">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+		<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Seafood">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Spice">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cardamom">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Switzerland">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nasi_lemak">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chinese_Indonesian_cuisine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Franconia">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Salvia_officinalis">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Austria">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nut_(fruit)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gaziantep">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rose_hip_soup">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Egypt">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Puftaloon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Clove">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dripping_cake">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Maltose">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Portugal">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Carnauba_wax">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Philippines">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Frankfurter_Kranz">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Raisin">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Netherlands">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pisto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Egg_white">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Norway">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Buttercream">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Indonesia">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nun's_puffs">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Singapore">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nasi_gurih">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Water">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tomato">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Djibouti">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Corn_syrup">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Punschkrapfen">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lucien_Olivier">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Basil">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Krumkake">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Coconut_milk">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Marraqueta">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Javanese_cuisine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Olivier_salad">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sundanese_people">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Olive_oil">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/South_Sulawesi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Leaf_vegetable">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hot_pot">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lebkuchen">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Food"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dumpling">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sugar">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Eukaryote"/>
+
+	</owl:NamedIndividual>
+     
+     
+   </rdf:RDF>

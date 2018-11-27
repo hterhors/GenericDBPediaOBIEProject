@@ -1,0 +1,4559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+ <owl:Class rdf:about="http://dbpedia.org/ontology/Magazine"/>
+
+	<owl:Class rdf:about="http://dbpedia.org/ontology/Person"/>
+
+	<owl:Class rdf:about="http://dbpedia.org/ontology/Manga"/>
+
+	<owl:Class rdf:about="http://dbpedia.org/ontology/Company"/>
+
+
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+   
+   
+<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/publisher">
+        
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Manga"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Company"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/illustrator">
+        
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Manga"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/magazine">
+        
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Manga"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/author">
+        
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Manga"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
+	</owl:ObjectProperty>
+
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatype Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+     
+     
+<owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/numberOfVolumes">
+		<rdfs:domain rdf:resource="http://dbpedia.org/ontology/Manga"/>
+	</owl:DatatypeProperty>
+      
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Named Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+     
+     
+<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kiyo_Kyujyo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Riku_Ranj%C5%8D">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yang_Kyung-il">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Young_Magazine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/GA_Geijutsuka_Art_Design_Class">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shoji_Gatoh">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Please_Save_My_Earth">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Recorder_and_Randsell">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Samurai_Legend">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Anohana:_The_Flower_We_Saw_That_Day">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Maid_Sama!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dengeki_Daioh">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akikan!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Michiharu_Kusunoki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Iono-sama_Fanatics">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Hero's">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Miki_Miyashita">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Me~teru_no_Kimochi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comic_Gyutto!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fumi_Saimon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hajime_Yatate">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Business_Jump">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hiroshi_Sakurazaka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Clover_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lychee_Light_Club">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kare_Kano">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vibulkij">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Comic_Alive">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Candy_Candy">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Clamp_(manga_artists)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Moonstone_(company)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/I_Dream_of_Mimi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/George_Asakura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nagamu_Nanaji">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bakuman">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Strawberry_Marshmallow">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/A.I._Revolution">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/H2O:_Footprints_in_the_Sand">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Natsumi_Itsuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shueisha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Meca_Tanaka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sayori_Ochiai">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yukiru_Sugisaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hokusei_Katsushika">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Until_the_Full_Moon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hinako_Takanaga">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Heaven's_Lost_Property">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comic_Gum">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yuri_Shimai">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chuokoron-Shinsha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shinobu_Kaitani">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Songs_to_Make_You_Smile">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yukito_Kishiro">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shaa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hana_to_Yume">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/K-Ske_Hasegawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mermaid_Melody_Pichi_Pichi_Pitch">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pita-Ten">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Magi-Cu">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shouko_Hamada_(artist)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kazuo_Kamimura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Itaru_Hinoue">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kentaro_Miura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kon_Kon_Kokon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mirage_of_Blaze">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gangan_Comics">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/MediaWorks_(publisher)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Allison_(novel_series)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yoshihide_Fujiwara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Iku_Sakaguchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shohei_Harumoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akita_Shoten">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Crying_Freeman">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ouran_High_School_Host_Club">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Media_Factory">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jiro_Taniguchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hisashi_Hirai">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Otome_wa_Boku_ni_Koishiteru">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sanami_Matoh">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Miki_Aihara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kentaro_Yasui">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chica_Umino">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nishinippon_Shimbun">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dengeki_hp">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/.hack//Legend_of_the_Twilight">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mei-chan_no_Shitsuji">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Backstage_Prince">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weekly_Manga_Goraku">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lovely_Idol">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lynn_Okamoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Change_123">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Satoshi_Shiki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Futabasha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Comic_Blade">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ghost_in_the_Shell">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Frontier_Works">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vagabond_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Haruhi_Suzumiya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yasu_(illustrator)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ribon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Koge-Donbo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shakugan_no_Shana">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yu_Aida">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ballad_of_a_Shinigami">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ui_Takano">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mangafan">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yuna_Kagesaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akiko_Higashimura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comic_Rex">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Be_Love">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tsuneo_Takano">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Satomi_Ikezawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Naoki_Urasawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Takumi_Nakazawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/August_(company)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Amagami">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ichiei_Ishibumi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Abara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Midnight_Secretary">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Queen_Millennia">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eiji_Usatsuka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Oishinbo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Noboru_Akashi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Big_Comic">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Broccoli_(company)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+		<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/CoroCoro_Comic">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yotsuba&amp;!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/LaLa_DX">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kaiji_Kawaguchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comic_Burger">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Moyasimon:_Tales_of_Agriculture">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weekly_Young_Sunday">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Comic_Ry%C5%AB">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/To_Love-Ru">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kuroko_Yabuguchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kashimashi:_Girl_Meets_Girl">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Strawberry_Panic!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Modern_Magic_Made_Simple">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chisato_Seki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mizuhito_Akiyama">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Love_Monster">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cloth_Road">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Marriage_Royale">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ryo_Takamisaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Masamune_Shirow">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Windmill_(company)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/VS_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Amnesia_Labyrinth">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yashichiro_Takahashi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kamasutra_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shodensha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Petit_Flower">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ginban_Kaleidoscope">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kilala_Princess">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yubisaki_Milk_Tea">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Humanity_Has_Declined">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Berserk_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kodansha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rino_Fujii">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Agobaria">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Romeo_Tanaka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kou_Yaginuma">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vividred_Operation">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Majestic_Prince_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Broken_Angels_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Keiji_Gotoh">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chocotto_Sister">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Navel_(company)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_Embalmer">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/J%C5%8Dji_Kamio">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Zetman">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kirarin_Revolution">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Garo_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Two_Flowers_for_the_Dragon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Infinity_Studios">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ryukishi07">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Natsu_e_no_Tobira">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comic_Beam">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nari_Kusakawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/UFO_Baby">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blank_Slate_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fairy_Cube">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bloody_Kiss">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Crossroad_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fist_of_the_North_Star">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jump_Square">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Taifu_Comics">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hidefumi_Kimura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Megami_Magazine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fantastic_Detective_Labyrinth">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Solanin">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hiro_Suzuhira">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kerberos_&amp;_Tachiguishi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Satosumi_Takaguchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Saki_Hasemi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Comic_Avarus">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yumeiro_Patissiere">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weekly_Morning">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Circus_(company)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yuki_Suetsugu">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Amagi_Brilliant_Park">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kazumi_Hoshi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kiyohiko_Azuma">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mashiroiro_Symphony">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Saint_Young_Men">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monster_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kud_Wafter">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Betsucomi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Alpen_Rose">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tsugumi_Ohba">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mitsuru_Hattori">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Happy_World!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shuffle!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Twin_Spica">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tatsuyama_Sayuri">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cinnamoroll">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tohru_Kai">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Seoul_Munhwa-Sa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kaori_Yuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Miyama-Zero">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bessatsu_Friend">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Manga_Erotics_F">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Myself_;_Yourself">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Air_(visual_novel)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akira_Akatsuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sh%C5%8Dnen_Ace">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eiki_Eiki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_Silent_Service">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Takeshi_Shud%C5%8D">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Riichiro_Inagaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Masaya_Tsunamoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Aquarium_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sola_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/V_Jump">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Medaka_Box">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ai_Morinaga">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eternal_Filena">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tsujitomo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Old_Boy_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mari_Okada">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Elfen_Lied">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/A_Perfect_Day_for_Love_Letters">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/20th_Century_Boys">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Manga_Time_Kirara_Carat">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mugen_Spiral">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jun_Maeda">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tamiki_Wakaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mihona_Fujii">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kaworu_Watashiya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Telepathic_Wanderers">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Daewon_C.I.">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Toriko_Chiya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jin_Kobayashi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Takeshi_Obata">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/MegaMan_NT_Warrior">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kunio_Nagatani">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eyeshield_21">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Club_9">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Stu-Hiro">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Angel_Beats!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tenjho_Tenge">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sakura_Tsukuba">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Grand_Guignol_Orchestra">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ah_My_Buddha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Planeta_DeAgostini">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Seiichi_Hayashi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mobile_Suit_Gundam:_The_Origin">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fumiko_Shiba">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hikaru_Sugii">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Scola_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Noriyoshi_Inoue">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hirohisa_Soda">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kouhaku_Kuroboshi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fortune_Arterial">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fujimi_Shobo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/A_Zoo_in_Winter">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chako_Abeno">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/All_You_Need_Is_Kill">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Da_Ran_Culture">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Young_You">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hikaru_Nakamura_(artist)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Paradigm_(publisher)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yumi_Tsukirino">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kentaro_Yabuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chu-Bra!!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Happy_Happy_Clover">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Living_for_the_Day_After_Tomorrow">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shunji_Enomoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Reine_Hibiki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/An_Nakahara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bessatsu_Hana_to_Yume">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hitoma_Iruma">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kaoru_Shintani">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Masao_Yajima">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mel_Kishida">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Air_Master">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Clear_(visual_novel)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Da_Capo_(visual_novel)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Masaya_Hokazono">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hiroaki_Samura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Satoko_Kiyuzuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mistress_Fortune">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Daphne_in_the_Brilliant_Blue">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Otaku_no_Musume-san">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rumiko_Takahashi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Clannad_(visual_novel)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Noizi_Ito">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yen_Press">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Okama_(artist)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sayaka_Yamazaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ichijinsha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yoshitoshi_ABe">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Liar_Game">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nagaru_Tanigawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Star_Comics">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Del_Rey_Manga">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Takehito_Mizuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yuu_Asami">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ebookjapan">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Michiko_Yokote">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nihon_Bungeisha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Leaf_(Japanese_company)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/B't_X">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tokyo_Mew_Mew">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gakuen_Utopia_Manabi_Straight!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Riko_Miyagi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sukeban_Deka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cactus's_Secret">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chi's_Sweet_Home">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gl%C3%A9nat_(publisher)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Denpa_Onna_to_Seishun_Otoko">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ral_Grad">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Buronson">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Y%C5%8Dichir%C5%8D_Ono">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dengeki_Comic_Gao!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mamizu_Arisawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kaze_no_Daichi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/X_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yuyuko_Takemiya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Manga_Time_Kirara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Uzumaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Grandpa_Danger">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Keiichi_Sigsawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_Journey_of_Shuna">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Muka_Muka_Paradise">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mamoru_Oshii">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dark_Horse_Comics">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+		<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yukiwo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Margaret_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Movic">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/My_Birthday">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eat-Man">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Young_Champion">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pink_Hanamori">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Heiwa_Shuppan">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dengeki_Bunko_Magazine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Seven_Seas_Entertainment">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Buriki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Dragon_Age">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dragon_Zakura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tears_of_a_Lamb">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akane_Ogura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ai_Yori_Aoshi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/IC_in_a_Sunflower">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sugar_Soldier">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sakurako_Kimino">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/ASCII_Media_Works">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hoshi_wa_Utau">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Red_Colored_Elegy">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Keito_Koume">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weekly_Sh%C5%8Dnen_Champion">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Be_Boy_Comics">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ghost_in_the_Shell_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kadokawa_Shoten">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Keisuke_Fujikawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Love_Stage!!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kazuko_Furumiya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Watashitachi_no_Tamura-kun">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Murikuri">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hitomi_Amamiya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/CMX_(comics)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hikaru_Niijima">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Flex_Comix">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sakura_Takeuchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cardcaptor_Sakura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Moon_Child_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Thores_Shibamoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Asuka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Makoto_Kobayashi_(artist)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Arina_Tanemura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hideo_Kato">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gals!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weekly_Young_Jump">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/XxxHolic">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rei_Izumi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yurara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Heyne_publishing_house">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yoshikazu_Yasuhiko">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hi_Izuru_Tokoro_no_Tenshi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mera_Hakamada">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chibi_Devi!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Houbunsha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Amie_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akira_Kanbe">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ryoichi_Ikegami">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yoko_Matsushita">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mazinkaizer_SKL">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Natsuki_Takaya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/March_Comes_in_Like_a_Lion">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Y%C5%ABichi_Suzumoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mia_Ikumi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Karakuri_Odette">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Usamaru_Furuya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Reiko_Shimizu">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hari_Tokeino">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jyu-Oh-Sei">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bisco_Hatori">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Court_Betten">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rinko_Ueda">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tsukasa_Fushimi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Random_House">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tayutama:_Kiss_on_my_Deity">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gundam_Ace">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Norifusa_Mita">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Golden_Time_(novel_series)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Girl_Friend_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Katsuhiro_Otomo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dance_till_Tomorrow">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Miyabi_Fujieda">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Suu_Minazuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hiro_Fujiwara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kaishaku_(manga_group)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Takashi_Takeuchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Aiyoku_no_Eustia">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Parfait_Tic!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Honey_Hunt">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sunaho_Tobe">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mako_Komao">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bunka_Fashion_College">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Faster_than_a_Kiss">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Isuna_Hasekura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Libre_Publishing">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Wani_Books">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Strike_the_Blood">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Red_Data_Girl">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Boys_Over_Flowers">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Keiko_Yamada_(artist)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Higanbana_no_Saku_Yoru_ni">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kazumi_Toujou">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nishinippon_Sports">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nodame_Cantabile">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tokyopop">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_Familiar_of_Zero">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shioko_Mizuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nakayoshi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comp_Ace">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Delcourt_(publisher)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Casterman">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Milk_Morinaga">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Wandering_Son">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jonesky">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Makoto_Yukimura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comic_High!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_Guilty_(novel)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Reki_Kawahara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Suzuhito_Yasuda">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kaneyoshi_Izumi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Asunaro_Hakusho">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Masami_Tsuda">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Go_Nagai">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jive_(publisher)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Evening_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_Sneaker">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tartan_Check">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Wangan_Midnight">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Takashi_Nagasaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Accel_World">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sanctuary_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Noriko_Ogiwara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Oreimo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bessatsu_Sh%C5%8Dnen_Magazine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gimmick!_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Michiyo_Akaishi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Zettai_Heiwa_Daisakusen">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Princess_Jellyfish">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ohta_Publishing">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Battle_Angel_Alita">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Big_Comic_Spirits">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Enterbrain">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+		<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Naoshi_Komi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yoake_Mae_yori_Ruriiro_na">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yuki_Urushibara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Magazine_Special">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Initial_D">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tomoyo_After:_It's_a_Wonderful_Life">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/J%C5%AB_Ayakura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kohki_Kanoh">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Strobe_Edge">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Baby_Princess">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/I.O.N">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pika_%C3%89dition">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rei_Hiroe">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Takehiko_Inoue">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Natsumi_Ando">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tramps_Like_Us">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chihayafuru">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mizuna_Kuwabara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cybele_Publishing">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/GotoP">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kiyoko_Arai">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chitose_Maki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shinchosha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hidamari_Sketch">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kanao_Araki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Momoko_Sakura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ryohgo_Narita">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shu_2_Comic_Gekkin">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mizuho_Kusanagi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Y%C5%8Dzabur%C5%8D_Kanari">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jiro_Matsumoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gunslinger_Girl">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vampire_Knight">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Miyuki-chan_in_Wonderland">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gin'iro_no_Olynssis">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Momotaro_Miyano">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kana_Yamamoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/G%C5%8D_Zappa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kanata_Konami">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Trinity_Blood">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Meme_Higashiya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/School_Days_(visual_novel)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Leiji_Matsumoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tomohiro_Shimoguchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Earl_Cain">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/J-ta_Yamada">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akihito_Yoshitomi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Maria-sama_ga_Miteru">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Di(e)ce">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rando_Ayamine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Natsumi_Matsumoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Death_Note">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nobuhiro_Watsuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jarinko_Chie">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blood_Hound_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bessatsu_Margaret">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Junjo_Romantica:_Pure_Romance">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mayu_Sakai">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Epic_Comics">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Takako_Shimura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Motoka_Murakami">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comptiq">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ken_Wakasaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Brynhildr_in_the_Darkness">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yusuke_Murata">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chika_Shiomi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shiroi_Heya_no_Futari">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Land_of_the_Blindfolded">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mad_Bull_34">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tetsuo_Hara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Angel_Sanctuary">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rockin'_Heaven">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Moto_Hagio">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tantei_Opera_Milky_Holmes">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Big_Comic_Original">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Epix_F%C3%B6rlag">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sweet_Blue_Flowers">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Maison_Ikkoku">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Life_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Square_Enix">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Meito_Manj%C5%8D">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Animage">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mika_Kawamura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mirai_Keisatsu_Urashiman">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mirmo!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yumiko_Igarashi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/LaLa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Angel_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Super_Jump">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Indian_Summer_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dream_Saga">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/A_Spirit_of_the_Sun">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/U-Jin">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shimoku_Kio">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pucchigumi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/SS_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chibi_Vampire">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nisekoi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jitsugyo_no_Nihon_Sha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kabao_Kikkawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Descendants_of_Darkness">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Genshiken">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Julietta_Suzuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Miwa_Ueda">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ribon_Original">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akemi_Takada">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bookbox">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yukiko_Sumiyoshi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kazuya_Kudo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Takeshobo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nobuaki_Minegishi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sankei_Shimbun">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+		<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shadow_Skill">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weekly_Comic_Bunch">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hiroya_Oku">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Aya_Kanno">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kerberos_Saga_Rainy_Dogs">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/NG_Life">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Helter_Skelter_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Your_and_My_Secret">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kanoko_Sakurakoji">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mitsukazu_Mihara">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dengeki_Maoh">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Manga_Life_Original">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Garon_Tsuchiya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shiuri_Iwasawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shuichi_Shigeno">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hitoshi_Tomizawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ohmi_Tomu">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cheese!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cobalt_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Takagi_Shigeyoshi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Short-Tempered_Melancholic">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yokusaru_Shibata">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Setona_Mizushiro">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Spice_and_Wolf">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Heaven's_Memo_Pad">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kuchibiru_Tameiki_Sakurairo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Asuka_Ciel">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shinji_Wada">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kazutoshi_Soyama">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Inio_Asano">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Beauty_Pop">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Ikki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Young_King_OURs">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tomomasa_Takuma">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Melody_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Etsumi_Haruki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comi_Digi_+">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Type-Moon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Real_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yuki_Kiriga">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sylph_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Aoi_Nishimata">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Angel_Nest">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eiji_Kazama">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tomochika_Miyano">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Matsuri_Hino">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eiichi_Shimizu">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Sunday_Gene-X">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Billy_Bat">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Masami_Kurumada">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kakifly">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fusosha_Publishing">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nisio_Isin">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kamisama_Kiss">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_Last_Uniform">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tokuma_Shoten">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JPOP">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Riyoko_Ikeda">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dengeki_G's_Magazine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Namuchi_Takumi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/V.B._Rose">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kamichama_Karin">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cookie_(manga_magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kyousuke_Motomi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/K-On!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Madman_Entertainment">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Freesia_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shinji_Kimura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Human_Crossing">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fate/Zero">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Anata_to_Scandal">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rurouni_Kenshin">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kazuo_Koike">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/High_School_DxD">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bandai_Visual">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gemini_Knives">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chicago_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mushishi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mikiyo_Tsuda">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cocohana">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blade_of_the_Phantom_Master">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blood_Reign:_Curse_of_the_Yoma">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Champion_Red">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pocopoco">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comic_Rush">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kanon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Keiko_Tobe">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Newtype">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Young_Champ">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Can't_Win_with_You!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Giant_Killing">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bushiroad">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kan_Furuyama">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ayumi_Shiina">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Banri_Hidaka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Megumi_Tachikawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jin_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Miho_Obana">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Another_(novel)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blade_of_the_Immortal">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weekly_Sh%C5%8Dnen_Jump">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mag_Garden">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yoko_Kamio">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sailor_Moon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Miyuki_Miyabe">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shogakukan">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Young_Animal">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Durarara!!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Miyuki_Kobayashi_(writer)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weekly_Sh%C5%8Dnen_Sunday">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tanoshimi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Afternoon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weekly_Sh%C5%8Dnen_Magazine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Manga_Action">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fate/kaleid_liner_Prisma_Illya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Love_Live!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comic_Yuri_Hime">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Katsura_Izumi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gen_Urobuchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rika_Tanaka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Z/X">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Palette_(company)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Baccano!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hideyuki_Kurata">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Othello_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Paradigm">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Reiko_Yoshida">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akira_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chibi_Maruko-chan">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Feel_Young">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yukine_Honami">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Norio_Tsukudani">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Zodiac_P.I.">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yasutaka_Tsutsui">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Love_Vibes">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mamoru_Sugiura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Keiko_Suenobu">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hiromu_Shinozuka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Juri_Misaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Himegoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Little_Fluffy_Gigolo_Pelu">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sunao_Yoshida">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sharp_Point_Press">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Masayuki_Ishikawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Saint_Seiya_Episode.G">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Princess_Comics">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Barabanba">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Poe_no_Ichizoku">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Saki_Hiwatari">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hayao_Miyazaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dragon_Age_Pure">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Viz_Media">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kodomo_no_Jikan">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_Rose_of_Versailles">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_Candidate_for_Goddess">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Manga_Club_Original">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kenshi_Hirokane">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Black_Lagoon">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Clamp_School_Detectives">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Go!_Comi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hot_Limit_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Azumanga_Daioh">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yumi_Tamura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ryoko_Yamagishi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yoshiyuki_Tomino">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/A_Cruel_God_Reigns">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shungiku_Nakamura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/0verflow">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Satoru_Akahori">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Carlsen_Verlag">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kino's_Journey">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sankarea:_Undying_Love">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kyoko_Okazaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Master_Keaton">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Stepping_on_Roses">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ever_Glory_Publishing">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gingitsune">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Morning_2">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akira_Hanasaki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Me_&amp;_My_Brothers">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kaeko_Iguchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yayoi_Ogawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shattered_Angels">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ryuchi_Matsuda">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Naoko_Takeuchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Megumu_Okada">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Caramel_Box">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weekly_Playboy">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dengeki_G's_Comic">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Youn_In-wan">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kitchen_Princess">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gift_(visual_novel)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hiroshi_Hiroyama">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Brave_Story">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Naoki_Hisaya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Queen's_Blade">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nanatsuiro_Drops">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Akazukin_Chacha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/1001_Knights">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Oh!_great">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hanappe_Bazooka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Arisa_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ciao_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gakken">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nana_Haruta">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hooksoft">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sonnanja_neyo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kazuto_Okada">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Petit_Comic">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yukimaru_Katsura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sundome">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ayato_Sasakura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Editorial_Ivrea">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kyoko_Mizuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ufotable">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_World_God_Only_Knows">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/For_Mrs.">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Io_Sakisaka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kenjirou_Takeshita">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hipira:_The_Little_Vampire">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Planetes">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gate_7">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Flower_in_a_Storm">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Masakazu_Katsura">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kenji_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/HoneyComing">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nao_Kodaka">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comic_Blade_Masamune">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hibiki's_Magic">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tetsu_Kariya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/The_Girl_Who_Leapt_Through_Space">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Seiji_Wakayama">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Setsuri_Tsuzuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kou_Fumizuki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yumi_Nakata">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Nobuhiro_Sakata">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lady_Snowblood_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/X-Day_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kei_Kusunoki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Toradora!">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ume_Aoki">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Erica_Sakurazawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ultraman_(manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Clover_(Toriko_Chiya_manga)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Happiness!_(visual_novel)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Peach_Girl">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Comic_Flapper">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yukito_Ayatsuji">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Harvest">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Da_Capo_II">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tsutomu_Nihei">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dragon_Magazine_(Fujimi_Shobo)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kira_Inugami">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Editions_Kurokawa">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Monthly_Comic_Zero_Sum">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/With_the_Light">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JManga">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Min_Ayahana">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blue_Drop">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gakuto_Mikumo">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Keiko_Takemiya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kurogane_Communication">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Junji_Ito">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hakusensha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Toshinori_Sogabe">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dengeki_Daisy">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Naoki_Yamamoto">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/White_Album_(visual_novel)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ace_Tokunoh">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kodocha">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Alien_Nine">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chuang_Yi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Morning_two">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Noboru_Yamaguchi_(author)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hobby_Japan">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kiss_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bohemian_K">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Enix">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Big_Comic_Superior">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Young_Ace">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ultra_Jump">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/School_Rumble">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Barasui">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Enomoto:_New_Elements_that_Shake_the_World">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Manga_Time_Kirara_Max">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tomoko_Ninomiya">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pineapple_Army">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Manga"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Level_Comics">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Company"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hiroki_Haruse">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Junko_Mizuno">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Princess_(magazine)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Magazine"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Key_(company)">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tomoko_Taniguchi">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Minori_Shima">
+			<rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+
+	</owl:NamedIndividual>
+     
+     
+   </rdf:RDF>
