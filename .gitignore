@@ -1,1 +1,10 @@
 /target/
+/.classpath
+/.project
+/results/
+/gen/
+/bigram/
+/.settings/
+/entropyResults
+/marginResults
+/randomResults
