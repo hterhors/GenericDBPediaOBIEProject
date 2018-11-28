@@ -21,7 +21,7 @@ public class DamOntologyEnvironment extends AbstractOntologyEnvironment {
 	private final String ontologyBasePackage = "de.hterhors.obie.projects.dbpedia.ontology.dam.";
 
 	final public static int version = 1;
-	public static final File ONTOLOGY_FILE = new File("owl/dam/Dam_autoGen_v" + version + ".owl");
+	public static final File ONTOLOGY_FILE = new File("src/main/resources/owl/dam/Dam_autoGen_v" + version + ".owl");
 	public static final String DEFAULT_DATA_NAMESPACE = "http://dbpedia/dam/";
 	public static final String ONTOLOGY_NAME = "Dam";
 

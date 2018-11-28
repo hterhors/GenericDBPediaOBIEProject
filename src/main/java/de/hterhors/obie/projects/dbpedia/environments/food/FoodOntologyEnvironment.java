@@ -21,7 +21,7 @@ public class FoodOntologyEnvironment extends AbstractOntologyEnvironment {
 	private final String ontologyBasePackage = "de.hterhors.obie.projects.dbpedia.ontology.food.";
 
 	final public static int version = 1;
-	public static final File ONTOLOGY_FILE = new File("owl/food/Food_autoGen_v" + version + ".owl");
+	public static final File ONTOLOGY_FILE = new File("src/main/resources/owl/food/Food_autoGen_v" + version + ".owl");
 	public static final String DEFAULT_DATA_NAMESPACE = "http://dbpedia/food/";
 	public static final String ONTOLOGY_NAME = "Food";
 

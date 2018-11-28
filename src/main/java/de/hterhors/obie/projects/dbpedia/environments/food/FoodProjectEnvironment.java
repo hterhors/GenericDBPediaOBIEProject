@@ -23,9 +23,9 @@ public class FoodProjectEnvironment extends AbstractProjectEnvironment<IFoodThin
 	 */
 	final private static String corpusPrefix = "4To6Props";
 
-	private final File rawCorpusFile = new File("corpus/raw_corpus_food4To6Prop_v1.bin");
+	private final File rawCorpusFile = new File("src/main/resources/corpus/raw/raw_corpus_food4To6Prop_v1.bin");
 
-	private final File projectCorpusDirectory = new File("bigram/corpus/");
+	private final File projectCorpusDirectory = new File("src/main/resources/corpus/bigram/");
 
 	public static FoodProjectEnvironment getInstance() {
 		log.info("Return instance of " + FoodProjectEnvironment.class.getName());

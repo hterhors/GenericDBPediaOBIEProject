@@ -21,7 +21,7 @@ public class MangaOntologyEnvironment extends AbstractOntologyEnvironment {
 	private final String ontologyBasePackage = "de.hterhors.obie.projects.dbpedia.ontology.manga.";
 
 	final public static int version = 2;
-	public static final File ONTOLOGY_FILE = new File("owl/manga/Manga_autoGen_v" + version + ".owl");
+	public static final File ONTOLOGY_FILE = new File("src/main/resources/owl/manga/Manga_autoGen_v" + version + ".owl");
 	public static final String DEFAULT_DATA_NAMESPACE = "http://dbpedia/manga/";
 	public static final String ONTOLOGY_NAME = "Manga";
 

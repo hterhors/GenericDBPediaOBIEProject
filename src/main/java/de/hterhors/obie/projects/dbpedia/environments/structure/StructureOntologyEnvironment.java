@@ -21,7 +21,8 @@ public class StructureOntologyEnvironment extends AbstractOntologyEnvironment {
 	private final String ontologyBasePackage = "de.hterhors.obie.projects.dbpedia.ontology.structure.";
 
 	final public static int version = 3;
-	public static final File ONTOLOGY_FILE = new File("owl/architecturalStructure/ArchitecturalStructure_autoGen_v" + version + ".owl");
+	public static final File ONTOLOGY_FILE = new File(
+			"src/main/resources/owl/architecturalStructure/ArchitecturalStructure_autoGen_v" + version + ".owl");
 	public static final String DEFAULT_DATA_NAMESPACE = "http://dbpedia/architecturalStructure/";
 	public static final String ONTOLOGY_NAME = "ArchitecturalStructure";
 
@@ -63,7 +64,6 @@ public class StructureOntologyEnvironment extends AbstractOntologyEnvironment {
 	public Set<String> getCollectiveClasses() {
 		return Collections.emptySet();
 	}
-
 
 	@Override
 	public String getBasePackage() {
