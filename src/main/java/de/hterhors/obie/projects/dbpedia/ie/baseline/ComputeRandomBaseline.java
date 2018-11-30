@@ -6,7 +6,7 @@ import de.hterhors.obie.core.evaluation.PRF1;
 import de.hterhors.obie.core.ontology.OntologyInitializer;
 import de.hterhors.obie.ml.corpus.distributor.FoldCrossCorpusDistributor;
 import de.hterhors.obie.ml.run.AbstractRunner;
-import de.hterhors.obie.ml.run.StandardRERunner;
+import de.hterhors.obie.ml.run.DefaultSlotFillingRunner;
 import de.hterhors.obie.ml.run.param.RunParameter;
 import de.hterhors.obie.ml.run.param.RunParameter.Builder;
 import de.hterhors.obie.ml.tools.baseline.RandomBaseline;
@@ -38,11 +38,11 @@ public class ComputeRandomBaseline {
 		paramBuilder.setProjectEnvironment(StructureProjectEnvironment.getInstance());
 
 		RunParameter param = paramBuilder.build();
-		AbstractRunner runner = new StandardRERunner(param);
+		AbstractRunner runner = new DefaultSlotFillingRunner(param);
 
 		final long initSeed = 200L;
-//		Random r = new Random(initSeed);
-		Random r = new Random();
+		Random r = new Random(initSeed);
+//		Random r = new Random();
 		while (runner.corpusProvider.nextFold()) {
 
 			long seed = r.nextLong();
@@ -56,7 +56,7 @@ public class ComputeRandomBaseline {
 //			System.out.println("Set test instances to:");
 //			runner.corpusProvider.getTestCorpus().getInternalInstances().forEach(System.out::println);
 			System.out.println("#############################");
-			PRF1 prf1 = new RandomBaseline(param, seed).run(runner.corpusProvider.getTestCorpus());
+			PRF1 prf1 = new RandomBaseline(param, seed).run(runner.corpusProvider.getFullCorpus());
 
 			mean.add(prf1);
 			System.out.println("Time needed: " + (System.currentTimeMillis() - time));

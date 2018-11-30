@@ -41,14 +41,12 @@ import de.hterhors.obie.ml.corpus.distributor.AbstractCorpusDistributor;
 import de.hterhors.obie.ml.corpus.distributor.ActiveLearningDistributor;
 import de.hterhors.obie.ml.corpus.distributor.ActiveLearningDistributor.Builder.EMode;
 import de.hterhors.obie.ml.run.AbstractRunner;
-import de.hterhors.obie.ml.run.StandardRERunner;
+import de.hterhors.obie.ml.run.DefaultSlotFillingRunner;
 import de.hterhors.obie.ml.run.eval.EvaluatePrediction;
 import de.hterhors.obie.ml.run.param.RunParameter;
 import de.hterhors.obie.ml.run.param.RunParameter.Builder;
 import de.hterhors.obie.ml.templates.AbstractOBIETemplate;
 import de.hterhors.obie.ml.templates.CooccurrenceTemplate;
-import de.hterhors.obie.ml.templates.FrequencyTemplate;
-import de.hterhors.obie.ml.templates.GenericMainTemplatePriorTemplate;
 import de.hterhors.obie.ml.templates.InBetweenContextTemplate;
 import de.hterhors.obie.ml.templates.InterTokenTemplate;
 import de.hterhors.obie.ml.templates.LocalTemplate;
@@ -98,7 +96,7 @@ public class GenericCorpusExtraction {
 //			args = new String[] { "varianceResults", "variance", "20", "100", "Single"  };
 			args = new String[] { "randomResults", "random", "20", "100", "ArchitecturalStructure" };
 //			args = new String[] { "lengthResults", "length", "20", "100", "Single"  };
-//			args = new String[] { "rndFillerResults", "rndFiller", "20", "100", "Single"  };
+//			args = new String[] { "rndFillerResults", "rndFiller", "20", "100", "ArchitecturalStructure"  };
 //			args = new String[] { "entropyResults", "entropy", "20", "100", "Single"  };
 //			args = new String[] { "entropyAtomicResults", "entropyAtomic", "20", "100", "Single"  };
 //			args = new String[] { "modelResults", "model", "20", "100", "Single"  };
@@ -193,7 +191,7 @@ public class GenericCorpusExtraction {
 		/*
 		 * Created new standard Relation Extraction runner.
 		 */
-		AbstractRunner runner = new StandardRERunner(parameter);
+		AbstractRunner runner = new DefaultSlotFillingRunner(parameter);
 
 		/**
 		 * Whether you want to run the prediction of new texts or train and test a model
@@ -211,13 +209,13 @@ public class GenericCorpusExtraction {
 			/*
 			 * train and/or test on existing corpus.
 			 */
-//			reverseEngeneerACLearning(runner,seed);
+			reverseEngineerACLearning(runner, seed);
 
-			if (activeLearning) {
-				activeLearning(runner, acMode, printResults, seed);
-			} else {
-				trainTest(runner);
-			}
+//			if (activeLearning) {
+//				activeLearning(runner, acMode, printResults, seed);
+//			} else {
+//				trainTest(runner);
+//			}
 
 		} else {
 			/*
@@ -248,6 +246,19 @@ public class GenericCorpusExtraction {
 		 * The number of epochs that the system should be trained.
 		 */
 		final int epochs = 10;
+//		10 epochs PRF1 [tp=223.0, fp=21.0, fn=352.0, getF1()=0.5445665445665445, getRecall()=0.38782608695652177, getPrecision()=0.9139344262295082, getJaccard()=0.37416107382550334]
+//		prob 100 epochs PRF1 [tp=252.0, fp=19.0, fn=323.0, getF1()=0.5957446808510638, getRecall()=0.43826086956521737, getPrecision()=0.9298892988929889, getJaccard()=0.42424242424242425]
+//		softmax 100 epochs  PRF1 [tp=239.0, fp=20.0, fn=336.0, getF1()=0.5731414868105515, getRecall()=0.4156521739130435, getPrecision()=0.9227799227799228, getJaccard()=0.4016806722689076]
+//		PRF1 [tp=276.0, fp=34.0, fn=297.0, getF1()=0.6251415628539071, getRecall()=0.4816753926701571, getPrecision()=0.8903225806451613, getJaccard()=0.4546952224052718]
+//		PRF1 [tp=278.0, fp=29.0, fn=296.0, getF1()=0.6311010215664018, getRecall()=0.4843205574912892, getPrecision()=0.9055374592833876, getJaccard()=0.46102819237147596]
+
+//	mixed 50% 100 epochs	PRF1 [tp=429.0, fp=101.0, fn=138.0, getF1()=0.7821330902461258, getRecall()=0.7566137566137566, getPrecision()=0.809433962264151, getJaccard()=0.6422155688622755]
+//	 only greedy 100 epochs	PRF1 [tp=408.0, fp=146.0, fn=153.0, getF1()=0.7318385650224215, getRecall()=0.7272727272727273, getPrecision()=0.7364620938628159, getJaccard()=0.5770862800565771]
+//	only greedy 10 epochs	PRF1 [tp=431.0, fp=123.0, fn=129.0, getF1()=0.7737881508078994, getRecall()=0.7696428571428572, getPrecision()=0.7779783393501805, getJaccard()=0.6310395314787701]
+// mixed 50% 10 epochs 	    PRF1 [tp=422.0, fp=114.0, fn=140.0, getF1()=0.7686703096539163, getRecall()=0.7508896797153025, getPrecision()=0.7873134328358209, getJaccard()=0.6242603550295858]
+// linear only objective 10 epochs	PRF1 [tp=428.0, fp=271.0, fn=131.0, getF1()=0.6804451510333863, getRecall()=0.7656529516994633, getPrecision()=0.6123032904148784, getJaccard()=0.5156626506024097]
+// linear only objective 100 epochs	PRF1 [tp=428.0, fp=139.0, fn=137.0, getF1()=0.7561837455830389, getRecall()=0.7575221238938054, getPrecision()=0.7548500881834215, getJaccard()=0.6079545454545454]
+// greedy objective score 10 epochs  PRF1 [tp=424.0, fp=492.0, fn=124.0, getF1()=0.5792349726775956, getRecall()=0.7737226277372263, getPrecision()=0.462882096069869, getJaccard()=0.4076923076923077]
 
 		/**
 		 * The distribution of the documents in the corpus. Origin takes training ,
@@ -259,12 +270,8 @@ public class GenericCorpusExtraction {
 //				.originDist(1F);
 
 		final AbstractCorpusDistributor corpusDistributor = new ActiveLearningDistributor.Builder()
-				.setMode(EMode.ABSOLUT).setBPercentage(0.11F).setBAbsolute(1).setSeed(seed).setCorpusSizeFraction(1F)
+				.setMode(EMode.ABSOLUT).setBPercentage(0.11F).setBAbsolute(1).setSeed(seed).setCorpusSizeFraction(0.3F)
 				.setInitialTrainingSelectionFraction(0.1f).setTrainingProportion(80).setTestProportion(20).build();
-
-//		final AbstractCorpusDistributor corpusDistributor = new ActiveLearningDistributor.Builder().setB(25)
-//				.setSeed(200L).setCorpusSizeFraction(1F).setInitialTrainingSelectionFraction(0.0855f)
-//				.setTrainingProportion(80).setTestProportion(20).build();
 
 //		final AbstractCorpusDistributor corpusDistributor = ByNameDist.corpusDistributor;
 
@@ -483,6 +490,7 @@ public class GenericCorpusExtraction {
 		int iterationCounter = 0;
 
 		List<String> performances = new ArrayList<>();
+		PrintStream ps = new PrintStream(new File("pickedInstances"));
 
 		do {
 
@@ -506,6 +514,7 @@ public class GenericCorpusExtraction {
 			} else {
 				log.info("New instances:");
 				newTrainingInstances.forEach(s -> log.info(c + "_NEW\t" + s.getName()));
+				newTrainingInstances.forEach(s -> ps.println(c + "_NEW\t" + s.getName()));
 
 				runner.clean(getParameter(seed));
 				runner.train();
@@ -549,7 +558,7 @@ public class GenericCorpusExtraction {
 			log.info("Time needed: " + (System.currentTimeMillis() - time));
 
 		} while (!(newTrainingInstances = runner.corpusProvider.updateActiveLearning(runner, ranker)).isEmpty());
-
+		ps.close();
 		log.info("--------------" + runID + "---------------");
 
 		log.info("Total time needed: " + (System.currentTimeMillis() - allTime));
@@ -595,14 +604,48 @@ public class GenericCorpusExtraction {
 
 		}
 		final List<X> sortablePerformances = new ArrayList<>();
+//		runner.corpusProvider.getDevelopCorpus().getInternalInstanceByName("Pioneer_and_Endicott_Buildings");
+//		runner.corpusProvider.getDevelopCorpus().getInternalInstanceByName("Stuckman_Cottage");
+//
+//		runner.clean(getParameter(seed));
+//		runner.train();
+//
+//		Level trainerLevel = LogManager.getFormatterLogger(Trainer.class.getName()).getLevel();
+//		Level runnerLevel = LogManager.getFormatterLogger(AbstractRunner.class).getLevel();
+//
+////		Configurator.setLevel(Trainer.class.getName(), Level.FATAL);
+////		Configurator.setLevel(AbstractRunner.class.getName(), Level.FATAL);
+//
+//		List<SampledInstance<OBIEInstance, InstanceTemplateAnnotations, OBIEState>> predictions = runner.testOnTest();
+//
+////		Configurator.setLevel(Trainer.class.getName(), trainerLevel);
+////		Configurator.setLevel(AbstractRunner.class.getName(), runnerLevel);
+//
+//		PRF1 prf1 = EvaluatePrediction.evaluateREPredictions(runner.getObjectiveFunction(), predictions,
+//				runner.getParameter().evaluator);
+//
+//		String logPerformance = runner.corpusProvider.getTrainingCorpus().getInternalInstances().size() + "\t"
+//				+ prf1.getPrecision() + "\t" + prf1.getRecall() + "\t" + prf1.getF1();
+//
+//		log.info("-----------------------------");
+//		log.info(logPerformance);
+//
+//		log.info("-----------------------------");
 
 		for (OBIEInstance instance : runner.corpusProvider.getDevelopCorpus().getInternalInstances()) {
+
+//			if (!(instance.getName().equals("Pioneer_and_Endicott_Buildings")
+//					|| instance.getName().equals("Stuckman_Cottage")))
+//				continue;
 
 			log.info("Add instance: " + instance);
 
 			List<OBIEInstance> trainingInstances = new ArrayList<>();
 
 			trainingInstances.addAll(memTrain);
+//		trainingInstances.add(
+//				runner.corpusProvider.getDevelopCorpus().getInternalInstanceByName("Pioneer_and_Endicott_Buildings"));
+//		trainingInstances.add(runner.corpusProvider.getDevelopCorpus().getInternalInstanceByName("Stuckman_Cottage"));
 			trainingInstances.add(instance);
 
 			runner.corpusProvider.trainingCorpus = new BigramInternalCorpus(trainingInstances);
@@ -625,7 +668,7 @@ public class GenericCorpusExtraction {
 			PRF1 prf1 = EvaluatePrediction.evaluateREPredictions(runner.getObjectiveFunction(), predictions,
 					runner.getParameter().evaluator);
 
-			final String logPerformance = runner.corpusProvider.getTrainingCorpus().getInternalInstances().size() + "\t"
+			String logPerformance = runner.corpusProvider.getTrainingCorpus().getInternalInstances().size() + "\t"
 					+ prf1.getPrecision() + "\t" + prf1.getRecall() + "\t" + prf1.getF1();
 
 			log.info("-----------------------------");
@@ -640,9 +683,10 @@ public class GenericCorpusExtraction {
 			System.gc();
 
 		}
-
+		PrintStream ps = new PrintStream(new File("plus1Results"));
 		log.info("--------------" + runID + "---------------");
 		sortablePerformances.forEach(log::info);
+		sortablePerformances.forEach(ps::println);
 
 	}
 

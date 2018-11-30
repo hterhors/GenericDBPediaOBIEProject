@@ -48,11 +48,7 @@ public class PrintRawCorpus {
 
 					if (templateAnnotation instanceof ArchitecturalStructure) {
 
-						IOpeningYear l = ((ArchitecturalStructure) templateAnnotation).getOpeningYear();
-						if (l == null)
-							continue;
-
-						System.out.println(OBIEClassFormatter.format(templateAnnotation));
+//						System.out.println(OBIEClassFormatter.format(templateAnnotation));
 //				
 //						IDam d = (IDam) templateAnnotation;
 //

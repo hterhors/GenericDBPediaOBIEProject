@@ -11,16 +11,17 @@ import de.hterhors.obie.ml.run.param.RunParameter.Builder;
 import de.hterhors.obie.ml.utils.OBIEClassFormatter;
 import de.hterhors.obie.ml.variables.OBIEInstance;
 import de.hterhors.obie.ml.variables.TemplateAnnotation;
-import de.hterhors.obie.projects.dbpedia.environments.film.FilmOntologyEnvironment;
-import de.hterhors.obie.projects.dbpedia.environments.film.FilmProjectEnvironment;
+import de.hterhors.obie.projects.dbpedia.environments.structure.StructureOntologyEnvironment;
+import de.hterhors.obie.projects.dbpedia.environments.structure.StructureProjectEnvironment;
 import de.hterhors.obie.projects.dbpedia.ie.parameter.DBPediaParameterQuickAccess;
 import de.hterhors.obie.projects.dbpedia.ontology.film.interfaces.IFilm;
+import de.hterhors.obie.projects.dbpedia.ontology.structure.interfaces.IArchitecturalStructure;
 
 public class PrintBigramCorpus {
 
 	public static void main(String[] args) {
 		{
-			OntologyInitializer.initializeOntology(FilmOntologyEnvironment.getInstance());
+			OntologyInitializer.initializeOntology(StructureOntologyEnvironment.getInstance());
 		}
 		/*
 		 * Get some standard parameter. These are not important for this example. the
@@ -53,7 +54,7 @@ public class PrintBigramCorpus {
 
 			System.out.println("________" + instance.getName() + "________");
 			System.out.println(instance.getContent());
-			System.out.println("____________Template Annotation(s)____________");
+			System.out.println("____________NERL Annotation(s)____________");
 
 			for (Class<? extends IOBIEThing> annotatedClass : instance.getNamedEntityLinkingAnnotations()
 					.getAvailableClassTypes()) {
@@ -74,7 +75,6 @@ public class PrintBigramCorpus {
 			for (TemplateAnnotation templateAnnotation : instance.getGoldAnnotation().getTemplateAnnotations()) {
 				System.out.println(OBIEClassFormatter.format(templateAnnotation.getThing()));
 			}
-			break;
 
 		}
 	}
@@ -85,10 +85,10 @@ public class PrintBigramCorpus {
 	 * @return
 	 */
 	private static Builder getStandardParameter() {
-		Builder paramBuilder = DBPediaParameterQuickAccess.getREParameter(IFilm.class);
+		Builder paramBuilder = DBPediaParameterQuickAccess.getREParameter(IArchitecturalStructure.class);
 
-		paramBuilder.setProjectEnvironment(FilmProjectEnvironment.getInstance());
-		paramBuilder.setOntologyEnvironment(FilmOntologyEnvironment.getInstance());
+		paramBuilder.setProjectEnvironment(StructureProjectEnvironment.getInstance());
+		paramBuilder.setOntologyEnvironment(StructureOntologyEnvironment.getInstance());
 
 		return paramBuilder;
 	}

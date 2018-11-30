@@ -4,7 +4,7 @@ import de.hterhors.obie.core.evaluation.PRF1;
 import de.hterhors.obie.core.ontology.OntologyInitializer;
 import de.hterhors.obie.ml.corpus.distributor.FoldCrossCorpusDistributor;
 import de.hterhors.obie.ml.run.AbstractRunner;
-import de.hterhors.obie.ml.run.StandardRERunner;
+import de.hterhors.obie.ml.run.DefaultSlotFillingRunner;
 import de.hterhors.obie.ml.run.param.RunParameter;
 import de.hterhors.obie.ml.run.param.RunParameter.Builder;
 import de.hterhors.obie.ml.tools.baseline.HighFrequencyBaseline;
@@ -34,7 +34,7 @@ public class ComputeHighFreqBaseline {
 		paramBuilder.setProjectEnvironment(StructureProjectEnvironment.getInstance());
 
 		RunParameter param = paramBuilder.build();
-		AbstractRunner runner = new StandardRERunner(param);
+		AbstractRunner runner = new DefaultSlotFillingRunner(param);
 
 		while (runner.corpusProvider.nextFold()) {
 
