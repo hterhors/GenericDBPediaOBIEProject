@@ -23,12 +23,12 @@ import java.util.stream.Collectors;
 * @author hterhors
 *
 *
-*Nov 6, 2018
+*Dec 12, 2018
 */
 
-@ImplementationClass(get=NumberOfVolumes.class)
-
 @AssignableSubInterfaces(get={})
+
+@ImplementationClass(get=NumberOfVolumes.class)
 
 @DatatypeProperty public interface INumberOfVolumes
  extends IDatatype, IMangaThing{

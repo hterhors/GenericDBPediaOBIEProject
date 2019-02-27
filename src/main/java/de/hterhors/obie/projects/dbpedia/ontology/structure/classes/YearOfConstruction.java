@@ -15,6 +15,7 @@ import org.apache.jena.rdf.model.Resource;
 import java.util.Map;
 import java.lang.InstantiationException;
 import java.lang.SecurityException;
+import de.hterhors.obie.core.ontology.InvestigationRestriction;
 import de.hterhors.obie.core.ontology.annotations.DirectSiblings;
 import java.lang.IllegalAccessException;
 import de.hterhors.obie.core.ontology.annotations.AssignableSubClasses;
@@ -35,7 +36,7 @@ import de.hterhors.obie.core.ontology.AbstractIndividual;
 * @author hterhors
 *
 *
-*Nov 27, 2018
+*Dec 12, 2018
 */
 
 @SuperRootClasses(get={YearOfConstruction.class, })
@@ -51,29 +52,29 @@ import de.hterhors.obie.core.ontology.AbstractIndividual;
 	final static public String ONTOLOGY_NAME = "http://dbpedia/architecturalStructure/YearOfConstruction";
 	private Integer characterOffset;
 	private Integer characterOnset;
+	final private String interpretedValue;
 	final static private Map<IOBIEThing, String> resourceFactory = new HashMap<>();
-	final private String semanticValue;
 	final static private long serialVersionUID = 3L;
 	@TextMention
 final private String textMention;
 
 
-	public YearOfConstruction(String semanticValue, String textMention){
-this.semanticValue = semanticValue;
+	public YearOfConstruction(){
+this.interpretedValue = null;
+this.textMention = null;
+}
+	public YearOfConstruction(String interpretedValue, String textMention){
+this.interpretedValue = interpretedValue;
 this.textMention = textMention;
 }
 	public YearOfConstruction(YearOfConstruction yearOfConstruction){
 this.characterOffset = yearOfConstruction.getCharacterOffset();
 this.characterOnset = yearOfConstruction.getCharacterOnset();
-this.semanticValue = yearOfConstruction.getSemanticValue();
+this.interpretedValue = yearOfConstruction.getInterpretedValue();
 this.textMention = yearOfConstruction.getTextMention();
 }
-	public YearOfConstruction(String semanticValue){
-this.semanticValue = semanticValue;
-this.textMention = null;
-}
-	public YearOfConstruction(){
-this.semanticValue = null;
+	public YearOfConstruction(String interpretedValue){
+this.interpretedValue = interpretedValue;
 this.textMention = null;
 }
 
@@ -103,10 +104,10 @@ if (other.characterOffset!= null)
 return false;
 } else if (!characterOffset.equals(other.characterOffset))
 return false;
-if (semanticValue == null) {
-if (other.semanticValue!= null)
+if (interpretedValue == null) {
+if (other.interpretedValue!= null)
 return false;
-} else if (!semanticValue.equals(other.semanticValue))
+} else if (!interpretedValue.equals(other.interpretedValue))
 return false;
 return true;
 }
@@ -118,6 +119,10 @@ return true;
 @Override
 	public Integer getCharacterOnset(){
 		return characterOnset;}
+	/***/
+@Override
+	public String getInterpretedValue(){
+		return interpretedValue;}
 	/***/
 @Override
 	public String getONTOLOGY_NAME(){
@@ -141,10 +146,6 @@ return IArchitecturalStructureThing.RDF_MODEL_NAMESPACE + resourceName;}
 }
 	/***/
 @Override
-	public String getSemanticValue(){
-		return semanticValue;}
-	/***/
-@Override
 	public String getTextMention(){
 		return textMention;}
 	/***/
@@ -155,13 +156,13 @@ int result = 1;
 result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
 result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
 result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
-result = prime * result + ((this.semanticValue == null) ? 0 : this.semanticValue.hashCode());
+result = prime * result + ((this.interpretedValue == null) ? 0 : this.interpretedValue.hashCode());
 return result;}
 	/***/
 @Override
 	public boolean isEmpty(){
 		boolean isEmpty = true;
-isEmpty &= this.semanticValue == null;
+isEmpty &= this.interpretedValue == null;
 if(!isEmpty) return false;
 
 return true;}
@@ -174,7 +175,7 @@ return true;}
 
 @Override
 public String toString(){
-return "YearOfConstruction [characterOffset="+characterOffset+",characterOnset="+characterOnset+",semanticValue="+semanticValue+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
+return "YearOfConstruction [characterOffset="+characterOffset+",characterOnset="+characterOnset+",interpretedValue="+interpretedValue+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
 
 
 }

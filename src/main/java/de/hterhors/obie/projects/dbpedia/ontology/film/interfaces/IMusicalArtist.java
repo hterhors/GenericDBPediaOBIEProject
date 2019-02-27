@@ -23,12 +23,12 @@ import java.util.stream.Collectors;
 * @author hterhors
 *
 *
-*Nov 8, 2018
+*Dec 12, 2018
 */
 
-@ImplementationClass(get=MusicalArtist.class)
-
 @AssignableSubInterfaces(get={})
+
+@ImplementationClass(get=MusicalArtist.class)
  public interface IMusicalArtist
  extends IFilmThing{
 

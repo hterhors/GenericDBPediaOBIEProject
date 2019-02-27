@@ -19,7 +19,7 @@ import org.apache.jena.rdf.model.Model;
 * @author hterhors
 *
 *
-*Nov 14, 2018
+*Dec 12, 2018
 */
 
 @AssignableSubInterfaces(get={IPerson.class, IGenre.class, ISingle.class, IBand.class, IAgent.class, IMusicalArtist.class, IAlbum.class, })

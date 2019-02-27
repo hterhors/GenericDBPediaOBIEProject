@@ -5,10 +5,10 @@ import de.hterhors.obie.ml.corpus.BigramCorpusProvider;
 import de.hterhors.obie.ml.run.param.RunParameter;
 import de.hterhors.obie.ml.run.param.RunParameter.Builder;
 import de.hterhors.obie.ml.tools.upperbound.UpperBound;
-import de.hterhors.obie.projects.dbpedia.environments.structure.StructureOntologyEnvironment;
-import de.hterhors.obie.projects.dbpedia.environments.structure.StructureProjectEnvironment;
+import de.hterhors.obie.projects.dbpedia.environments.dam.DamOntologyEnvironment;
+import de.hterhors.obie.projects.dbpedia.environments.dam.DamProjectEnvironment;
 import de.hterhors.obie.projects.dbpedia.ie.parameter.DBPediaParameterQuickAccess;
-import de.hterhors.obie.projects.dbpedia.ontology.structure.interfaces.IArchitecturalStructure;
+import de.hterhors.obie.projects.dbpedia.ontology.dam.interfaces.IDam;
 
 /**
  * This class contains example code for analyzing a bigram-corpus given the
@@ -24,7 +24,7 @@ public class ComputeUpperBound {
 
 	public static void main(String[] args) {
 
-		OntologyInitializer.initializeOntology(StructureOntologyEnvironment.getInstance());
+		OntologyInitializer.initializeOntology(DamOntologyEnvironment.getInstance());
 
 		/*
 		 * Get some standard parameter.
@@ -44,10 +44,10 @@ public class ComputeUpperBound {
 	 */
 	private static Builder getStandardParameter() {
 
-		Builder paramBuilder = DBPediaParameterQuickAccess.getREParameter(IArchitecturalStructure.class);
+		Builder paramBuilder = DBPediaParameterQuickAccess.getREParameter(IDam.class);
 
-		paramBuilder.setProjectEnvironment(StructureProjectEnvironment.getInstance());
-		paramBuilder.setOntologyEnvironment(StructureOntologyEnvironment.getInstance());
+		paramBuilder.setProjectEnvironment(DamProjectEnvironment.getInstance());
+		paramBuilder.setOntologyEnvironment(DamOntologyEnvironment.getInstance());
 
 		paramBuilder.setCorpusDistributor(DBPediaParameterQuickAccess.predefinedDistributor.originDist(1.0F));
 
@@ -63,7 +63,6 @@ public class ComputeUpperBound {
 //class de.hterhors.obie.projects.dbpedia.ontology.single.classes.Band=60
 //class de.hterhors.obie.projects.dbpedia.ontology.single.classes.Agent=16
 //class de.hterhors.obie.projects.dbpedia.ontology.single.classes.Person=30
-
 
 //Structure
 //UpperBound = PRF1 [tp=2239.0, fp=0.0, fn=41.0, getF1()=0.9909271962823633, getRecall()=0.9820175438596491, getPrecision()=1.0, getJaccard()=0.9820175438596491]

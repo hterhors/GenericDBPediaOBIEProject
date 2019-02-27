@@ -23,9 +23,9 @@ public class SingleProjectEnvironment extends AbstractProjectEnvironment<ISingle
 	 */
 	final private static String corpusPrefix = "4To6Props";
 
-	private final File rawCorpusFile = new File("src/main/resources/corpus/raw/raw_corpus_single4To6Prop_v1.bin");
+	private final File rawCorpusFile = new File("corpus/raw/raw_corpus_single4To6Prop_v1.bin");
 
-	private final File projectCorpusDirectory = new File("src/main/resources/corpus/bigram/");
+	private final File projectCorpusDirectory = new File("corpus/bigram/");
 
 	public static SingleProjectEnvironment getInstance() {
 		log.info("Return instance of " + SingleProjectEnvironment.class.getName());

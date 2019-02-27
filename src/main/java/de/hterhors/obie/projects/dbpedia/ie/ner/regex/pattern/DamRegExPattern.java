@@ -31,7 +31,7 @@ public class DamRegExPattern extends BasicRegExPattern<IDamThing> {
 	/**
 	 * Common words that appears very often in many different contexts.
 	 */
-	private static final Set<String> STOP_WORDS = new HashSet<>(Arrays.asList("dam"));
+	private static final Set<String> STOP_WORDS = new HashSet<>(Arrays.asList("dam","river","dams","rivers"));
 
 	private static final Set<Pattern> YEAR_REG_EXP = new HashSet<>(Arrays.asList(YearInterpreter.PATTERN));
 	private static final Set<Pattern> STATUS_REG_EXP = new HashSet<>(Arrays.asList(StatusInterpreter.PATTERN));

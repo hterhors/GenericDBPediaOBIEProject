@@ -14,6 +14,7 @@ import org.apache.jena.rdf.model.Resource;
 import java.util.Map;
 import java.lang.InstantiationException;
 import java.lang.SecurityException;
+import de.hterhors.obie.core.ontology.InvestigationRestriction;
 import de.hterhors.obie.core.ontology.annotations.DirectSiblings;
 import java.lang.IllegalAccessException;
 import de.hterhors.obie.core.ontology.annotations.AssignableSubClasses;
@@ -35,16 +36,16 @@ import de.hterhors.obie.core.ontology.AbstractIndividual;
 * @author hterhors
 *
 *
-*Nov 8, 2018
+*Dec 12, 2018
 */
 
 @DirectInterface(get=IFilm.class)
 
+@AssignableSubClasses(get={})
+
 @SuperRootClasses(get={Film.class, })
 
 @DirectSiblings(get={})
-
-@AssignableSubClasses(get={})
  public class Film implements IFilm{
 
 final public static IndividualFactory<FilmIndividual> individualFactory = new IndividualFactory<>();
@@ -69,7 +70,15 @@ static class FilmIndividual extends AbstractIndividual {
 	@Override
 	public AbstractIndividual getIndividual() {
 		return individual;
-	}	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/Film";
+	}
+	@Override
+	public InvestigationRestriction getInvestigationRestriction() {
+		return investigationRestriction;
+	}
+	@Override
+	public Film setInvestigationRestriction(InvestigationRestriction investigationRestriction ) {
+		this.investigationRestriction = investigationRestriction;
+ return this;	}public InvestigationRestriction investigationRestriction;	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/Film";
 	private Integer characterOffset;
 	private Integer characterOnset;
 	@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/director")
@@ -78,8 +87,8 @@ private List<IPerson> directorPersons = new ArrayList<>();
 	@RelationTypeCollection
 @OntologyModelContent(ontologyName="http://dbpedia.org/ontology/distributor")
 private List<IOrganisation> distributorOrganisations = new ArrayList<>();
-	@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/musicComposer")
-@RelationTypeCollection
+	@RelationTypeCollection
+@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/musicComposer")
 private List<IMusicalArtist> musicComposerMusicalArtists = new ArrayList<>();
 	@RelationTypeCollection
 @OntologyModelContent(ontologyName="http://dbpedia.org/ontology/producer")
@@ -96,17 +105,9 @@ final private String textMention;
 private List<IPerson> writerPersons = new ArrayList<>();
 
 
-	public Film(String individualURI, String textMention){
-this.individual = 
-				Film.individualFactory.getIndividualByURI(individualURI);
-this.textMention = textMention;
-}
-	public Film(){
-this.individual = null;
-this.textMention = null;
-}
 	public Film(Film film)throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,NoSuchMethodException, SecurityException{
 this.individual = film.individual;
+this.investigationRestriction = film.investigationRestriction;
 this.characterOffset = film.getCharacterOffset();
 this.characterOnset = film.getCharacterOnset();
 for (int j = 0; j < film.getDirectorPersons().size(); j++) {if (film.getDirectorPersons().get(j) != null) {directorPersons.add((IPerson) IOBIEThing.getCloneConstructor(film.getDirectorPersons().get(j).getClass()).newInstance(film.getDirectorPersons().get(j)));} else {directorPersons.add(null);}}
@@ -116,6 +117,17 @@ for (int j = 0; j < film.getProducerAgents().size(); j++) {if (film.getProducerA
 for (int j = 0; j < film.getStarringActors().size(); j++) {if (film.getStarringActors().get(j) != null) {starringActors.add((IActor) IOBIEThing.getCloneConstructor(film.getStarringActors().get(j).getClass()).newInstance(film.getStarringActors().get(j)));} else {starringActors.add(null);}}
 this.textMention = film.getTextMention();
 for (int j = 0; j < film.getWriterPersons().size(); j++) {if (film.getWriterPersons().get(j) != null) {writerPersons.add((IPerson) IOBIEThing.getCloneConstructor(film.getWriterPersons().get(j).getClass()).newInstance(film.getWriterPersons().get(j)));} else {writerPersons.add(null);}}
+}
+	public Film(String individualURI, InvestigationRestriction investigationRestriction, String textMention){
+this.individual = 
+				Film.individualFactory.getIndividualByURI(individualURI);
+this.investigationRestriction = investigationRestriction==null?InvestigationRestriction.noRestrictionInstance:investigationRestriction;
+this.textMention = textMention;
+}
+	public Film(){
+this.individual = null;
+this.investigationRestriction = InvestigationRestriction.noRestrictionInstance;
+this.textMention = null;
 }
 
 
@@ -164,10 +176,15 @@ if (other.individual!= null)
 return false;
 } else if (!individual.equals(other.individual))
 return false;
-if (directorPersons == null) {
-if (other.directorPersons!= null)
+if (investigationRestriction == null) {
+if (other.investigationRestriction!= null)
 return false;
-} else if (!directorPersons.equals(other.directorPersons))
+} else if (!investigationRestriction.equals(other.investigationRestriction))
+return false;
+if (textMention == null) {
+if (other.textMention!= null)
+return false;
+} else if (!textMention.equals(other.textMention))
 return false;
 if (writerPersons == null) {
 if (other.writerPersons!= null)
@@ -179,10 +196,25 @@ if (other.producerAgents!= null)
 return false;
 } else if (!producerAgents.equals(other.producerAgents))
 return false;
+if (starringActors == null) {
+if (other.starringActors!= null)
+return false;
+} else if (!starringActors.equals(other.starringActors))
+return false;
+if (directorPersons == null) {
+if (other.directorPersons!= null)
+return false;
+} else if (!directorPersons.equals(other.directorPersons))
+return false;
 if (distributorOrganisations == null) {
 if (other.distributorOrganisations!= null)
 return false;
 } else if (!distributorOrganisations.equals(other.distributorOrganisations))
+return false;
+if (musicComposerMusicalArtists == null) {
+if (other.musicComposerMusicalArtists!= null)
+return false;
+} else if (!musicComposerMusicalArtists.equals(other.musicComposerMusicalArtists))
 return false;
 if (characterOnset == null) {
 if (other.characterOnset!= null)
@@ -193,21 +225,6 @@ if (characterOffset == null) {
 if (other.characterOffset!= null)
 return false;
 } else if (!characterOffset.equals(other.characterOffset))
-return false;
-if (musicComposerMusicalArtists == null) {
-if (other.musicComposerMusicalArtists!= null)
-return false;
-} else if (!musicComposerMusicalArtists.equals(other.musicComposerMusicalArtists))
-return false;
-if (textMention == null) {
-if (other.textMention!= null)
-return false;
-} else if (!textMention.equals(other.textMention))
-return false;
-if (starringActors == null) {
-if (other.starringActors!= null)
-return false;
-} else if (!starringActors.equals(other.starringActors))
 return false;
 return true;
 }
@@ -275,15 +292,16 @@ return IFilmThing.RDF_MODEL_NAMESPACE + resourceName;}
 		final int prime = 31;
 int result = 1;
 result = prime * result + ((this.individual == null) ? 0 : this.individual.hashCode());
-result = prime * result + ((this.directorPersons == null) ? 0 : this.directorPersons.hashCode());
+result = prime * result + ((this.investigationRestriction == null) ? 0 : this.investigationRestriction.hashCode());
+result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
 result = prime * result + ((this.writerPersons == null) ? 0 : this.writerPersons.hashCode());
 result = prime * result + ((this.producerAgents == null) ? 0 : this.producerAgents.hashCode());
+result = prime * result + ((this.starringActors == null) ? 0 : this.starringActors.hashCode());
+result = prime * result + ((this.directorPersons == null) ? 0 : this.directorPersons.hashCode());
 result = prime * result + ((this.distributorOrganisations == null) ? 0 : this.distributorOrganisations.hashCode());
+result = prime * result + ((this.musicComposerMusicalArtists == null) ? 0 : this.musicComposerMusicalArtists.hashCode());
 result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
 result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
-result = prime * result + ((this.musicComposerMusicalArtists == null) ? 0 : this.musicComposerMusicalArtists.hashCode());
-result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
-result = prime * result + ((this.starringActors == null) ? 0 : this.starringActors.hashCode());
 return result;}
 	/***/
 @Override
@@ -329,7 +347,7 @@ return this;}
 
 @Override
 public String toString(){
-return "Film [individual="+individual+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",directorPersons="+directorPersons+",distributorOrganisations="+distributorOrganisations+",musicComposerMusicalArtists="+musicComposerMusicalArtists+",producerAgents="+producerAgents+",serialVersionUID="+serialVersionUID+",starringActors="+starringActors+",textMention="+textMention+",writerPersons="+writerPersons+"]";}
+return "Film [individual="+individual+",investigationRestriction="+investigationRestriction.summarize()+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",directorPersons="+directorPersons+",distributorOrganisations="+distributorOrganisations+",musicComposerMusicalArtists="+musicComposerMusicalArtists+",producerAgents="+producerAgents+",serialVersionUID="+serialVersionUID+",starringActors="+starringActors+",textMention="+textMention+",writerPersons="+writerPersons+"]";}
 
 
 }

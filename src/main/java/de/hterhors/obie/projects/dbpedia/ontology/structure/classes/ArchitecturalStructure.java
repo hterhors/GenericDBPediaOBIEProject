@@ -15,6 +15,7 @@ import org.apache.jena.rdf.model.Resource;
 import java.util.Map;
 import java.lang.InstantiationException;
 import java.lang.SecurityException;
+import de.hterhors.obie.core.ontology.InvestigationRestriction;
 import de.hterhors.obie.core.ontology.annotations.DirectSiblings;
 import java.lang.IllegalAccessException;
 import de.hterhors.obie.core.ontology.annotations.AssignableSubClasses;
@@ -35,7 +36,7 @@ import de.hterhors.obie.core.ontology.AbstractIndividual;
 * @author hterhors
 *
 *
-*Nov 27, 2018
+*Dec 12, 2018
 */
 
 @DirectInterface(get=IArchitecturalStructure.class)
@@ -69,7 +70,15 @@ static class ArchitecturalStructureIndividual extends AbstractIndividual {
 	@Override
 	public AbstractIndividual getIndividual() {
 		return individual;
-	}	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/ArchitecturalStructure";
+	}
+	@Override
+	public InvestigationRestriction getInvestigationRestriction() {
+		return investigationRestriction;
+	}
+	@Override
+	public ArchitecturalStructure setInvestigationRestriction(InvestigationRestriction investigationRestriction ) {
+		this.investigationRestriction = investigationRestriction;
+ return this;	}public InvestigationRestriction investigationRestriction;	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/ArchitecturalStructure";
 	@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/architect")
 @RelationTypeCollection
 private List<IArchitect> architects = new ArrayList<>();
@@ -94,17 +103,20 @@ final private String textMention;
 private List<IYearOfConstruction> yearOfConstructions = new ArrayList<>();
 
 
-	public ArchitecturalStructure(String individualURI, String textMention){
+	public ArchitecturalStructure(String individualURI, InvestigationRestriction investigationRestriction, String textMention){
 this.individual = 
 				ArchitecturalStructure.individualFactory.getIndividualByURI(individualURI);
+this.investigationRestriction = investigationRestriction==null?InvestigationRestriction.noRestrictionInstance:investigationRestriction;
 this.textMention = textMention;
 }
 	public ArchitecturalStructure(){
 this.individual = null;
+this.investigationRestriction = InvestigationRestriction.noRestrictionInstance;
 this.textMention = null;
 }
 	public ArchitecturalStructure(ArchitecturalStructure architecturalStructure)throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,NoSuchMethodException, SecurityException{
 this.individual = architecturalStructure.individual;
+this.investigationRestriction = architecturalStructure.investigationRestriction;
 for (int j = 0; j < architecturalStructure.getArchitects().size(); j++) {if (architecturalStructure.getArchitects().get(j) != null) {architects.add((IArchitect) IOBIEThing.getCloneConstructor(architecturalStructure.getArchitects().get(j).getClass()).newInstance(architecturalStructure.getArchitects().get(j)));} else {architects.add(null);}}
 for (int j = 0; j < architecturalStructure.getArchitecturalStyles().size(); j++) {if (architecturalStructure.getArchitecturalStyles().get(j) != null) {architecturalStyles.add((IArchitecturalStyle) IOBIEThing.getCloneConstructor(architecturalStructure.getArchitecturalStyles().get(j).getClass()).newInstance(architecturalStructure.getArchitecturalStyles().get(j)));} else {architecturalStyles.add(null);}}
 this.characterOffset = architecturalStructure.getCharacterOffset();
@@ -150,6 +162,11 @@ if (individual == null) {
 if (other.individual!= null)
 return false;
 } else if (!individual.equals(other.individual))
+return false;
+if (investigationRestriction == null) {
+if (other.investigationRestriction!= null)
+return false;
+} else if (!investigationRestriction.equals(other.investigationRestriction))
 return false;
 if (yearOfConstructions == null) {
 if (other.yearOfConstructions!= null)
@@ -253,6 +270,7 @@ return IArchitecturalStructureThing.RDF_MODEL_NAMESPACE + resourceName;}
 		final int prime = 31;
 int result = 1;
 result = prime * result + ((this.individual == null) ? 0 : this.individual.hashCode());
+result = prime * result + ((this.investigationRestriction == null) ? 0 : this.investigationRestriction.hashCode());
 result = prime * result + ((this.yearOfConstructions == null) ? 0 : this.yearOfConstructions.hashCode());
 result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
 result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
@@ -301,7 +319,7 @@ return this;}
 
 @Override
 public String toString(){
-return "ArchitecturalStructure [individual="+individual+",architects="+architects+",architecturalStyles="+architecturalStyles+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",locationPlaces="+locationPlaces+",openingYear="+openingYear+",serialVersionUID="+serialVersionUID+",textMention="+textMention+",yearOfConstructions="+yearOfConstructions+"]";}
+return "ArchitecturalStructure [individual="+individual+",investigationRestriction="+investigationRestriction.summarize()+",architects="+architects+",architecturalStyles="+architecturalStyles+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",locationPlaces="+locationPlaces+",openingYear="+openingYear+",serialVersionUID="+serialVersionUID+",textMention="+textMention+",yearOfConstructions="+yearOfConstructions+"]";}
 
 
 }

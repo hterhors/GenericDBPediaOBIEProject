@@ -14,6 +14,7 @@ import org.apache.jena.rdf.model.Resource;
 import java.util.Map;
 import java.lang.InstantiationException;
 import java.lang.SecurityException;
+import de.hterhors.obie.core.ontology.InvestigationRestriction;
 import de.hterhors.obie.core.ontology.annotations.DirectSiblings;
 import java.lang.IllegalAccessException;
 import de.hterhors.obie.core.ontology.annotations.AssignableSubClasses;
@@ -35,16 +36,16 @@ import de.hterhors.obie.core.ontology.AbstractIndividual;
 * @author hterhors
 *
 *
-*Nov 6, 2018
+*Dec 12, 2018
 */
 
-@AssignableSubClasses(get={})
-
-@DirectInterface(get=ICompany.class)
+@DirectSiblings(get={})
 
 @SuperRootClasses(get={Company.class, })
 
-@DirectSiblings(get={})
+@DirectInterface(get=ICompany.class)
+
+@AssignableSubClasses(get={})
  public class Company implements ICompany{
 
 final public static IndividualFactory<CompanyIndividual> individualFactory = new IndividualFactory<>();
@@ -69,7 +70,15 @@ static class CompanyIndividual extends AbstractIndividual {
 	@Override
 	public AbstractIndividual getIndividual() {
 		return individual;
-	}	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/Company";
+	}
+	@Override
+	public InvestigationRestriction getInvestigationRestriction() {
+		return investigationRestriction;
+	}
+	@Override
+	public Company setInvestigationRestriction(InvestigationRestriction investigationRestriction ) {
+		this.investigationRestriction = investigationRestriction;
+ return this;	}public InvestigationRestriction investigationRestriction;	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/Company";
 	private Integer characterOffset;
 	private Integer characterOnset;
 	final static private Map<IOBIEThing, String> resourceFactory = new HashMap<>();
@@ -78,20 +87,23 @@ static class CompanyIndividual extends AbstractIndividual {
 final private String textMention;
 
 
-	public Company(){
-this.individual = null;
-this.textMention = null;
-}
-	public Company(String individualURI, String textMention){
+	public Company(String individualURI, InvestigationRestriction investigationRestriction, String textMention){
 this.individual = 
 				Company.individualFactory.getIndividualByURI(individualURI);
+this.investigationRestriction = investigationRestriction==null?InvestigationRestriction.noRestrictionInstance:investigationRestriction;
 this.textMention = textMention;
 }
 	public Company(Company company)throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,NoSuchMethodException, SecurityException{
 this.individual = company.individual;
+this.investigationRestriction = company.investigationRestriction;
 this.characterOffset = company.getCharacterOffset();
 this.characterOnset = company.getCharacterOnset();
 this.textMention = company.getTextMention();
+}
+	public Company(){
+this.individual = null;
+this.investigationRestriction = InvestigationRestriction.noRestrictionInstance;
+this.textMention = null;
 }
 
 
@@ -110,10 +122,10 @@ if (other.individual!= null)
 return false;
 } else if (!individual.equals(other.individual))
 return false;
-if (characterOffset == null) {
-if (other.characterOffset!= null)
+if (investigationRestriction == null) {
+if (other.investigationRestriction!= null)
 return false;
-} else if (!characterOffset.equals(other.characterOffset))
+} else if (!investigationRestriction.equals(other.investigationRestriction))
 return false;
 if (characterOnset == null) {
 if (other.characterOnset!= null)
@@ -124,6 +136,11 @@ if (textMention == null) {
 if (other.textMention!= null)
 return false;
 } else if (!textMention.equals(other.textMention))
+return false;
+if (characterOffset == null) {
+if (other.characterOffset!= null)
+return false;
+} else if (!characterOffset.equals(other.characterOffset))
 return false;
 return true;
 }
@@ -167,9 +184,10 @@ return IMangaThing.RDF_MODEL_NAMESPACE + resourceName;}
 		final int prime = 31;
 int result = 1;
 result = prime * result + ((this.individual == null) ? 0 : this.individual.hashCode());
-result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
+result = prime * result + ((this.investigationRestriction == null) ? 0 : this.investigationRestriction.hashCode());
 result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
 result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
+result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
 return result;}
 	/***/
 @Override
@@ -185,7 +203,7 @@ return false;}
 
 @Override
 public String toString(){
-return "Company [individual="+individual+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
+return "Company [individual="+individual+",investigationRestriction="+investigationRestriction.summarize()+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
 
 
 }

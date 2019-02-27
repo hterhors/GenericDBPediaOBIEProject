@@ -27,17 +27,18 @@ import de.hterhors.obie.projects.dbpedia.ontology.structure.interfaces.IArchitec
 public class BigramCorpusCreator {
 
 	public static void main(String[] args) throws Exception {
+
 		BigramCorpusBuilder.overrideCorpusFileIfExists = true;
 
 //		buildDam();
-//
-//		buildFood();
-//
-//		buildManga();
-//
-//		buildFilm();
-//
-//		buildSingle();
+
+		buildFood();
+
+		buildManga();
+
+		buildFilm();
+
+		buildSingle();
 
 		buildStructure();
 

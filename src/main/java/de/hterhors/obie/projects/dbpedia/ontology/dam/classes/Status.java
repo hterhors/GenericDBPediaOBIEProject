@@ -14,6 +14,7 @@ import org.apache.jena.rdf.model.Resource;
 import java.util.Map;
 import java.lang.InstantiationException;
 import java.lang.SecurityException;
+import de.hterhors.obie.core.ontology.InvestigationRestriction;
 import de.hterhors.obie.core.ontology.annotations.DirectSiblings;
 import java.lang.IllegalAccessException;
 import de.hterhors.obie.core.ontology.annotations.AssignableSubClasses;
@@ -35,45 +36,45 @@ import de.hterhors.obie.core.ontology.AbstractIndividual;
 * @author hterhors
 *
 *
-*Nov 6, 2018
+*Dec 12, 2018
 */
 
-@SuperRootClasses(get={Status.class, })
+@DirectSiblings(get={})
 
-@DatatypeProperty
 @DirectInterface(get=IStatus.class)
 
-@AssignableSubClasses(get={})
+@DatatypeProperty
+@SuperRootClasses(get={Status.class, })
 
-@DirectSiblings(get={})
+@AssignableSubClasses(get={})
  public class Status implements IStatus{
 
 	final static public String ONTOLOGY_NAME = "http://dbpedia/dam/Status";
 	private Integer characterOffset;
 	private Integer characterOnset;
+	final private String interpretedValue;
 	final static private Map<IOBIEThing, String> resourceFactory = new HashMap<>();
-	final private String semanticValue;
 	final static private long serialVersionUID = 1L;
 	@TextMention
 final private String textMention;
 
 
-	public Status(String semanticValue, String textMention){
-this.semanticValue = semanticValue;
-this.textMention = textMention;
-}
-	public Status(String semanticValue){
-this.semanticValue = semanticValue;
+	public Status(){
+this.interpretedValue = null;
 this.textMention = null;
 }
-	public Status(){
-this.semanticValue = null;
+	public Status(String interpretedValue, String textMention){
+this.interpretedValue = interpretedValue;
+this.textMention = textMention;
+}
+	public Status(String interpretedValue){
+this.interpretedValue = interpretedValue;
 this.textMention = null;
 }
 	public Status(Status status){
 this.characterOffset = status.getCharacterOffset();
 this.characterOnset = status.getCharacterOnset();
-this.semanticValue = status.getSemanticValue();
+this.interpretedValue = status.getInterpretedValue();
 this.textMention = status.getTextMention();
 }
 
@@ -88,16 +89,6 @@ return false;
 if (getClass() != obj.getClass())
 return false;
 Status other = (Status) obj;
-if (semanticValue == null) {
-if (other.semanticValue!= null)
-return false;
-} else if (!semanticValue.equals(other.semanticValue))
-return false;
-if (characterOffset == null) {
-if (other.characterOffset!= null)
-return false;
-} else if (!characterOffset.equals(other.characterOffset))
-return false;
 if (characterOnset == null) {
 if (other.characterOnset!= null)
 return false;
@@ -107,6 +98,16 @@ if (textMention == null) {
 if (other.textMention!= null)
 return false;
 } else if (!textMention.equals(other.textMention))
+return false;
+if (characterOffset == null) {
+if (other.characterOffset!= null)
+return false;
+} else if (!characterOffset.equals(other.characterOffset))
+return false;
+if (interpretedValue == null) {
+if (other.interpretedValue!= null)
+return false;
+} else if (!interpretedValue.equals(other.interpretedValue))
 return false;
 return true;
 }
@@ -118,6 +119,10 @@ return true;
 @Override
 	public Integer getCharacterOnset(){
 		return characterOnset;}
+	/***/
+@Override
+	public String getInterpretedValue(){
+		return interpretedValue;}
 	/***/
 @Override
 	public String getONTOLOGY_NAME(){
@@ -141,10 +146,6 @@ return IDamThing.RDF_MODEL_NAMESPACE + resourceName;}
 }
 	/***/
 @Override
-	public String getSemanticValue(){
-		return semanticValue;}
-	/***/
-@Override
 	public String getTextMention(){
 		return textMention;}
 	/***/
@@ -152,16 +153,16 @@ return IDamThing.RDF_MODEL_NAMESPACE + resourceName;}
 	public int hashCode(){
 		final int prime = 31;
 int result = 1;
-result = prime * result + ((this.semanticValue == null) ? 0 : this.semanticValue.hashCode());
-result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
 result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
 result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
+result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
+result = prime * result + ((this.interpretedValue == null) ? 0 : this.interpretedValue.hashCode());
 return result;}
 	/***/
 @Override
 	public boolean isEmpty(){
 		boolean isEmpty = true;
-isEmpty &= this.semanticValue == null;
+isEmpty &= this.interpretedValue == null;
 if(!isEmpty) return false;
 
 return true;}
@@ -174,7 +175,7 @@ return true;}
 
 @Override
 public String toString(){
-return "Status [characterOffset="+characterOffset+",characterOnset="+characterOnset+",semanticValue="+semanticValue+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
+return "Status [characterOffset="+characterOffset+",characterOnset="+characterOnset+",interpretedValue="+interpretedValue+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
 
 
 }

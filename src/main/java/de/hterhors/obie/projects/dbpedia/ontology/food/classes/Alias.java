@@ -15,6 +15,7 @@ import java.util.Map;
 import java.lang.InstantiationException;
 import de.hterhors.obie.projects.dbpedia.ontology.food.interfaces.*;
 import java.lang.SecurityException;
+import de.hterhors.obie.core.ontology.InvestigationRestriction;
 import de.hterhors.obie.core.ontology.annotations.DirectSiblings;
 import java.lang.IllegalAccessException;
 import de.hterhors.obie.core.ontology.annotations.AssignableSubClasses;
@@ -31,171 +32,150 @@ import org.apache.jena.rdf.model.ModelFactory;
 import de.hterhors.obie.core.ontology.AbstractIndividual;
 
 /**
- *
- * @author hterhors
- *
- *
- *         Nov 6, 2018
- */
+*
+* @author hterhors
+*
+*
+*Dec 12, 2018
+*/
+
+@DirectInterface(get=IAlias.class)
+
+@DirectSiblings(get={})
+
+@SuperRootClasses(get={Alias.class, })
 
 @DatatypeProperty
-@DirectInterface(get = IAlias.class)
-
-@AssignableSubClasses(get = {})
-
-@SuperRootClasses(get = { Alias.class, })
-
-@DirectSiblings(get = {})
-public class Alias implements IAlias {
+@AssignableSubClasses(get={})
+ public class Alias implements IAlias{
 
 	final static public String ONTOLOGY_NAME = "http://dbpedia/food/Alias";
 	private Integer characterOffset;
 	private Integer characterOnset;
+	final private String interpretedValue;
 	final static private Map<IOBIEThing, String> resourceFactory = new HashMap<>();
-	final private String semanticValue;
 	final static private long serialVersionUID = 1L;
 	@TextMention
-	final private String textMention;
+final private String textMention;
 
-	public Alias(String semanticValue, String textMention) {
-		this.semanticValue = semanticValue;
-		this.textMention = textMention;
-	}
 
-	public Alias(String semanticValue) {
-		this.semanticValue = semanticValue;
-		this.textMention = null;
-	}
+	public Alias(String interpretedValue, String textMention){
+this.interpretedValue = interpretedValue;
+this.textMention = textMention;
+}
+	public Alias(String interpretedValue){
+this.interpretedValue = interpretedValue;
+this.textMention = null;
+}
+	public Alias(){
+this.interpretedValue = null;
+this.textMention = null;
+}
+	public Alias(Alias alias){
+this.characterOffset = alias.getCharacterOffset();
+this.characterOnset = alias.getCharacterOnset();
+this.interpretedValue = alias.getInterpretedValue();
+this.textMention = alias.getTextMention();
+}
 
-	public Alias() {
-		this.semanticValue = null;
-		this.textMention = null;
-	}
-
-	public Alias(Alias alias) {
-		this.characterOffset = alias.getCharacterOffset();
-		this.characterOnset = alias.getCharacterOnset();
-		this.semanticValue = alias.getSemanticValue();
-		this.textMention = alias.getTextMention();
-	}
 
 	/***/
-	@Override
-	public boolean equals(Object obj) {
+@Override
+	public boolean equals(Object obj){
 		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Alias other = (Alias) obj;
-		if (semanticValue == null) {
-			if (other.semanticValue != null)
-				return false;
-		} else if (!semanticValue.equals(other.semanticValue))
-			return false;
-		if (characterOnset == null) {
-			if (other.characterOnset != null)
-				return false;
-		} else if (!characterOnset.equals(other.characterOnset))
-			return false;
-		if (textMention == null) {
-			if (other.textMention != null)
-				return false;
-		} else if (!textMention.equals(other.textMention))
-			return false;
-		if (characterOffset == null) {
-			if (other.characterOffset != null)
-				return false;
-		} else if (!characterOffset.equals(other.characterOffset))
-			return false;
-		return true;
-	}
-
+return true;
+if (obj == null)
+return false;
+if (getClass() != obj.getClass())
+return false;
+Alias other = (Alias) obj;
+if (textMention == null) {
+if (other.textMention!= null)
+return false;
+} else if (!textMention.equals(other.textMention))
+return false;
+if (interpretedValue == null) {
+if (other.interpretedValue!= null)
+return false;
+} else if (!interpretedValue.equals(other.interpretedValue))
+return false;
+if (characterOnset == null) {
+if (other.characterOnset!= null)
+return false;
+} else if (!characterOnset.equals(other.characterOnset))
+return false;
+if (characterOffset == null) {
+if (other.characterOffset!= null)
+return false;
+} else if (!characterOffset.equals(other.characterOffset))
+return false;
+return true;
+}
 	/***/
-	@Override
-	public Integer getCharacterOffset() {
-		return characterOffset;
-	}
-
+@Override
+	public Integer getCharacterOffset(){
+		return characterOffset;}
 	/***/
-	@Override
-	public Integer getCharacterOnset() {
-		return characterOnset;
-	}
-
+@Override
+	public Integer getCharacterOnset(){
+		return characterOnset;}
 	/***/
-	@Override
-	public String getONTOLOGY_NAME() {
-		return ONTOLOGY_NAME;
-	}
-
+@Override
+	public String getInterpretedValue(){
+		return interpretedValue;}
 	/***/
-	@Override
-	public Model getRDFModel(String resourceIDPrefix) {
+@Override
+	public String getONTOLOGY_NAME(){
+		return ONTOLOGY_NAME;}
+	/***/
+@Override
+	public Model getRDFModel(String resourceIDPrefix){
 		Model model = ModelFactory.createDefaultModel();
 
-		return model;
-	}
-
+return model;
+}
 	/***/
-	@Override
-	public String getResourceName() {
+@Override
+	public String getResourceName(){
 		if (resourceFactory.containsKey(this)) {
-			return IFoodThing.RDF_MODEL_NAMESPACE + resourceFactory.get(this);
-		} else {
-			final String resourceName = getClass().getSimpleName() + "_" + resourceFactory.size();
-			resourceFactory.put(this, resourceName);
-			return IFoodThing.RDF_MODEL_NAMESPACE + resourceName;
-		}
-	}
-
+return IFoodThing.RDF_MODEL_NAMESPACE + resourceFactory.get(this);
+} else {
+final String resourceName = getClass().getSimpleName() + "_" + resourceFactory.size();
+resourceFactory.put(this, resourceName);
+return IFoodThing.RDF_MODEL_NAMESPACE + resourceName;}
+}
 	/***/
-	@Override
-	public String getSemanticValue() {
-		return semanticValue;
-	}
-
+@Override
+	public String getTextMention(){
+		return textMention;}
 	/***/
-	@Override
-	public String getTextMention() {
-		return textMention;
-	}
-
-	/***/
-	@Override
-	public int hashCode() {
+@Override
+	public int hashCode(){
 		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((this.semanticValue == null) ? 0 : this.semanticValue.hashCode());
-		result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
-		result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
-		result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
-		return result;
-	}
-
+int result = 1;
+result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
+result = prime * result + ((this.interpretedValue == null) ? 0 : this.interpretedValue.hashCode());
+result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
+result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
+return result;}
 	/***/
-	@Override
-	public boolean isEmpty() {
+@Override
+	public boolean isEmpty(){
 		boolean isEmpty = true;
-		isEmpty &= this.semanticValue == null;
-		if (!isEmpty)
-			return false;
+isEmpty &= this.interpretedValue == null;
+if(!isEmpty) return false;
 
-		return true;
-	}
-
+return true;}
 	/***/
-	@Override
-	public void setCharacterOnset(Integer onset) {
+@Override
+	public void setCharacterOnset(Integer onset){
 		this.characterOnset = onset;
-		this.characterOffset = onset + textMention.length();
-	}
+ this.characterOffset = onset + textMention.length();}
 
-	@Override
-	public String toString() {
-		return "Alias [characterOffset=" + characterOffset + ",characterOnset=" + characterOnset + ",semanticValue="
-				+ semanticValue + ",serialVersionUID=" + serialVersionUID + ",textMention=" + textMention + "]";
-	}
+
+@Override
+public String toString(){
+return "Alias [characterOffset="+characterOffset+",characterOnset="+characterOnset+",interpretedValue="+interpretedValue+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
+
 
 }

@@ -10,31 +10,29 @@ import de.hterhors.dbpedia.obie.corpus.GenericCorpusExtractor.IInstanceRestricti
 import de.hterhors.dbpedia.obie.infobox.DBPediaInfoBoxReaderConfig;
 import de.hterhors.dbpedia.obie.wikipage.WikiPageReaderConfig;
 import de.hterhors.obie.core.ontology.AbstractOntologyEnvironment;
+import de.hterhors.obie.core.ontology.ReflectionUtils;
 import de.hterhors.obie.core.ontology.annotations.RelationTypeCollection;
 import de.hterhors.obie.core.ontology.interfaces.IOBIEThing;
 import de.hterhors.obie.ml.dtinterpreter.IDatatypeInterpreter;
-import de.hterhors.obie.ml.utils.ReflectionUtils;
-import de.hterhors.obie.projects.dbpedia.environments.single.SingleOntologyEnvironment;
-import de.hterhors.obie.projects.dbpedia.environments.structure.StructureOntologyEnvironment;
-import de.hterhors.obie.projects.dbpedia.ie.dtinterpreter.single.SingleDatatypeInterpreter;
-import de.hterhors.obie.projects.dbpedia.ie.dtinterpreter.structure.ArchitecturalStructureDatatypeInterpreter;
-import de.hterhors.obie.projects.dbpedia.ontology.film.interfaces.IFilmThing;
-import de.hterhors.obie.projects.dbpedia.ontology.single.classes.Single;
-import de.hterhors.obie.projects.dbpedia.ontology.single.interfaces.ISingleThing;
-import de.hterhors.obie.projects.dbpedia.ontology.structure.classes.ArchitecturalStructure;
-import de.hterhors.obie.projects.dbpedia.ontology.structure.interfaces.IArchitecturalStructureThing;
+import de.hterhors.obie.projects.dbpedia.environments.dam.DamOntologyEnvironment;
+import de.hterhors.obie.projects.dbpedia.ie.dtinterpreter.dam.DamDatatypeInterpreter;
+import de.hterhors.obie.projects.dbpedia.ontology.dam.classes.Dam;
+import de.hterhors.obie.projects.dbpedia.ontology.dam.interfaces.IDamThing;
+import de.hterhors.obie.projects.dbpedia.ontology.food.interfaces.IFoodThing;
 
 public class GenericRawCorpusExtractor<T extends IOBIEThing> {
 
 	public static void main(String[] args) throws Exception {
-//		IInterpreter<IDamThing> interpreter = DamInterpreterProvider.getInstance();
-//		AbstractOntologyEnvironment ontologyEnvironment = DamOntologyEnvironment.getInstance();
-//		Class<? extends IDamThing> mainResourceClass = Dam.class;
 
-//		IInterpreter<IFoodThing> interpreter = FoodInterpreterProvider.getInstance();
+		IDatatypeInterpreter<IDamThing> interpreter = DamDatatypeInterpreter.getInstance();
+		AbstractOntologyEnvironment ontologyEnvironment = DamOntologyEnvironment.getInstance();
+		Class<? extends IDamThing> mainResourceClass = Dam.class;
+
+//		IDatatypeInterpreter<IFoodThing> interpreter = FoodDatatypeInterpreter.getInstance();
 //		AbstractOntologyEnvironment ontologyEnvironment = FoodOntologyEnvironment.getInstance();
 //		Class<? extends IFoodThing> mainResourceClass = Food.class;
-//
+
+		//
 //		IDatatypeInterpreter<IMangaThing> interpreter = MangaDatatypeInterpreter.getInstance();
 //		AbstractOntologyEnvironment ontologyEnvironment = MangaOntologyEnvironment.getInstance();
 //		Class<? extends IMangaThing> mainResourceClass = Manga.class;
@@ -47,13 +45,12 @@ public class GenericRawCorpusExtractor<T extends IOBIEThing> {
 //		AbstractOntologyEnvironment ontologyEnvironment = SingleOntologyEnvironment.getInstance();
 //		Class<? extends ISingleThing> mainResourceClass = Single.class;
 
-		IDatatypeInterpreter<IArchitecturalStructureThing> interpreter = ArchitecturalStructureDatatypeInterpreter
-				.getInstance();
-		AbstractOntologyEnvironment ontologyEnvironment = StructureOntologyEnvironment.getInstance();
-		Class<? extends IArchitecturalStructureThing> mainResourceClass = ArchitecturalStructure.class;
+//		IDatatypeInterpreter<IArchitecturalStructureThing> interpreter = ArchitecturalStructureDatatypeInterpreter
+//				.getInstance();
+//		AbstractOntologyEnvironment ontologyEnvironment = StructureOntologyEnvironment.getInstance();
+//		Class<? extends IArchitecturalStructureThing> mainResourceClass = ArchitecturalStructure.class;
 
-		new GenericRawCorpusExtractor<IArchitecturalStructureThing>(ontologyEnvironment, interpreter,
-				mainResourceClass);
+		new GenericRawCorpusExtractor<IDamThing>(ontologyEnvironment, interpreter, mainResourceClass);
 	}
 
 	final private static String directoryPrefix = "/home/hterhors/git/DBPediaOBIECorpusExtractor/";
@@ -100,13 +97,13 @@ public class GenericRawCorpusExtractor<T extends IOBIEThing> {
 		c.extractCorpus(new File(
 				directoryPrefix + "data/looseSelectionOutput4To6/" + mainResourceClass.getSimpleName() + ".txt"));
 
-		int maxnumberOfInstances = 3000;
+		int maxnumberOfInstances = 1000;
 
 		c.distributeInstances(new Random(100L), 80, 20, 20, maxnumberOfInstances);
 
 		c.storeCorpusJavaSerialization(
-				new File("corpus/raw_corpus_" + mainResourceClass.getSimpleName().toLowerCase() + "4To6Prop_v"
-						+ ontologyEnvironment.getOntologyVersion() + ".bin"),
+				new File("src/main/resources/corpus/raw/raw_corpus_" + mainResourceClass.getSimpleName().toLowerCase()
+						+ "4To6Prop_v" + ontologyEnvironment.getOntologyVersion() + ".bin"),
 				mainResourceClass.getSimpleName()
 						+ " corpus with 4 To 6 properties. Maximum number of elements in list-type slot = "
 						+ MAX_NUMBER_OF_ELEMENTS);

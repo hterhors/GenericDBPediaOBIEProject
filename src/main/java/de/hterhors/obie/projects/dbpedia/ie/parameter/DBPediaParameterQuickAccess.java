@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+import de.hterhors.obie.core.ontology.InvestigationRestriction;
 import de.hterhors.obie.core.ontology.interfaces.IOBIEThing;
 import de.hterhors.obie.ml.corpus.distributor.AbstractCorpusDistributor;
 import de.hterhors.obie.ml.corpus.distributor.ActiveLearningDistributor;
@@ -18,7 +19,6 @@ import de.hterhors.obie.ml.evaluation.evaluator.IOBIEEvaluator;
 import de.hterhors.obie.ml.explorer.AbstractOBIEExplorer;
 import de.hterhors.obie.ml.explorer.SlotCardinalityExplorer;
 import de.hterhors.obie.ml.explorer.SlotFillerExplorer;
-import de.hterhors.obie.ml.run.InvestigationRestriction;
 import de.hterhors.obie.ml.run.param.EInstantiationType;
 import de.hterhors.obie.ml.run.param.IInitializeNumberOfObjects;
 import de.hterhors.obie.ml.run.param.RunParameter.Builder;
@@ -155,8 +155,9 @@ public class DBPediaParameterQuickAccess {
 //				ignoreEmptyInstancesOnEvaluation);
 
 		final IOBIEEvaluator evaluator = new CartesianSearchEvaluator(enableEvaluationCaching, maxEvaluationDepth,
-				penalizeCardinality, investigationRestiction, new DatatypeOrListConditon(), maxNumberOfEntityElements,
-				ignoreEmptyInstancesOnEvaluation);
+				penalizeCardinality,
+//				investigationRestiction,
+				new DatatypeOrListConditon(), maxNumberOfEntityElements, ignoreEmptyInstancesOnEvaluation);
 
 		/**
 		 * The exploration strategies.

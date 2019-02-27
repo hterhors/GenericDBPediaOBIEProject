@@ -8,15 +8,15 @@ import de.hterhors.obie.ml.run.DefaultSlotFillingRunner;
 import de.hterhors.obie.ml.run.param.RunParameter;
 import de.hterhors.obie.ml.run.param.RunParameter.Builder;
 import de.hterhors.obie.ml.tools.baseline.HighFrequencyBaseline;
-import de.hterhors.obie.projects.dbpedia.environments.structure.StructureOntologyEnvironment;
-import de.hterhors.obie.projects.dbpedia.environments.structure.StructureProjectEnvironment;
+import de.hterhors.obie.projects.dbpedia.environments.film.FilmOntologyEnvironment;
+import de.hterhors.obie.projects.dbpedia.environments.film.FilmProjectEnvironment;
 import de.hterhors.obie.projects.dbpedia.ie.parameter.DBPediaParameterQuickAccess;
-import de.hterhors.obie.projects.dbpedia.ontology.structure.interfaces.IArchitecturalStructure;
+import de.hterhors.obie.projects.dbpedia.ontology.film.interfaces.IFilm;
 
 public class ComputeHighFreqBaseline {
 
 	public static void main(String[] args) throws Exception {
-		OntologyInitializer.initializeOntology(StructureOntologyEnvironment.getInstance());
+		OntologyInitializer.initializeOntology(FilmOntologyEnvironment.getInstance());
 
 		nFoldCrossValidation();
 	}
@@ -26,12 +26,12 @@ public class ComputeHighFreqBaseline {
 
 		long allTime = System.currentTimeMillis();
 
-		Builder paramBuilder = DBPediaParameterQuickAccess.getREParameter(IArchitecturalStructure.class);
+		Builder paramBuilder = DBPediaParameterQuickAccess.getREParameter(IFilm.class);
 
 		paramBuilder.setCorpusDistributor(DBPediaParameterQuickAccess.predefinedDistributor.foldCrossDist(1F));
 
-		paramBuilder.setOntologyEnvironment(StructureOntologyEnvironment.getInstance());
-		paramBuilder.setProjectEnvironment(StructureProjectEnvironment.getInstance());
+		paramBuilder.setOntologyEnvironment(FilmOntologyEnvironment.getInstance());
+		paramBuilder.setProjectEnvironment(FilmProjectEnvironment.getInstance());
 
 		RunParameter param = paramBuilder.build();
 		AbstractRunner runner = new DefaultSlotFillingRunner(param);
@@ -59,8 +59,3 @@ public class ComputeHighFreqBaseline {
 
 	}
 }
-
-//Structure
-//Time needed: 25
-//10 fold cross validation mean: PRF1 [tp=792.0, fp=2327.0, fn=1943.0, getF1()=0.2705842159207379, getRecall()=0.28957952468007314, getPrecision()=0.2539275408784867, getJaccard()=0.15645989727380483]
-//Time needed: 6362

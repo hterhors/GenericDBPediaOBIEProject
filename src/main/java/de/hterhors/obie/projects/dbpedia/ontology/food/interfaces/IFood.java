@@ -23,12 +23,12 @@ import java.util.stream.Collectors;
 * @author hterhors
 *
 *
-*Nov 6, 2018
+*Dec 12, 2018
 */
 
-@AssignableSubInterfaces(get={})
-
 @ImplementationClass(get=Food.class)
+
+@AssignableSubInterfaces(get={})
  public interface IFood
  extends IFoodThing{
 

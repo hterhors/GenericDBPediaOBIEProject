@@ -14,6 +14,7 @@ import org.apache.jena.rdf.model.Resource;
 import java.util.Map;
 import java.lang.InstantiationException;
 import java.lang.SecurityException;
+import de.hterhors.obie.core.ontology.InvestigationRestriction;
 import de.hterhors.obie.core.ontology.annotations.DirectSiblings;
 import java.lang.IllegalAccessException;
 import de.hterhors.obie.core.ontology.annotations.AssignableSubClasses;
@@ -35,16 +36,16 @@ import de.hterhors.obie.core.ontology.AbstractIndividual;
 * @author hterhors
 *
 *
-*Nov 6, 2018
+*Dec 12, 2018
 */
 
-@DirectInterface(get=IManga.class)
+@DirectSiblings(get={})
 
 @AssignableSubClasses(get={})
 
-@SuperRootClasses(get={Manga.class, })
+@DirectInterface(get=IManga.class)
 
-@DirectSiblings(get={})
+@SuperRootClasses(get={Manga.class, })
  public class Manga implements IManga{
 
 final public static IndividualFactory<MangaIndividual> individualFactory = new IndividualFactory<>();
@@ -69,20 +70,28 @@ static class MangaIndividual extends AbstractIndividual {
 	@Override
 	public AbstractIndividual getIndividual() {
 		return individual;
-	}	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/Manga";
-	@RelationTypeCollection
-@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/author")
+	}
+	@Override
+	public InvestigationRestriction getInvestigationRestriction() {
+		return investigationRestriction;
+	}
+	@Override
+	public Manga setInvestigationRestriction(InvestigationRestriction investigationRestriction ) {
+		this.investigationRestriction = investigationRestriction;
+ return this;	}public InvestigationRestriction investigationRestriction;	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/Manga";
+	@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/author")
+@RelationTypeCollection
 private List<IPerson> authorPersons = new ArrayList<>();
 	private Integer characterOffset;
 	private Integer characterOnset;
 	@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/illustrator")
 @RelationTypeCollection
 private List<IPerson> illustratorPersons = new ArrayList<>();
-	@RelationTypeCollection
-@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/magazine")
-private List<IMagazine> magazines = new ArrayList<>();
-	@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/numberOfVolumes")
+	@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/magazine")
 @RelationTypeCollection
+private List<IMagazine> magazines = new ArrayList<>();
+	@RelationTypeCollection
+@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/numberOfVolumes")
 @DatatypeProperty
 private List<INumberOfVolumes> numberOfVolumes = new ArrayList<>();
 	@RelationTypeCollection
@@ -96,6 +105,7 @@ final private String textMention;
 
 	public Manga(Manga manga)throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,NoSuchMethodException, SecurityException{
 this.individual = manga.individual;
+this.investigationRestriction = manga.investigationRestriction;
 for (int j = 0; j < manga.getAuthorPersons().size(); j++) {if (manga.getAuthorPersons().get(j) != null) {authorPersons.add((IPerson) IOBIEThing.getCloneConstructor(manga.getAuthorPersons().get(j).getClass()).newInstance(manga.getAuthorPersons().get(j)));} else {authorPersons.add(null);}}
 this.characterOffset = manga.getCharacterOffset();
 this.characterOnset = manga.getCharacterOnset();
@@ -105,14 +115,16 @@ for (int j = 0; j < manga.getNumberOfVolumes().size(); j++) {if (manga.getNumber
 for (int j = 0; j < manga.getPublisherCompanies().size(); j++) {if (manga.getPublisherCompanies().get(j) != null) {publisherCompanies.add((ICompany) IOBIEThing.getCloneConstructor(manga.getPublisherCompanies().get(j).getClass()).newInstance(manga.getPublisherCompanies().get(j)));} else {publisherCompanies.add(null);}}
 this.textMention = manga.getTextMention();
 }
-	public Manga(){
-this.individual = null;
-this.textMention = null;
-}
-	public Manga(String individualURI, String textMention){
+	public Manga(String individualURI, InvestigationRestriction investigationRestriction, String textMention){
 this.individual = 
 				Manga.individualFactory.getIndividualByURI(individualURI);
+this.investigationRestriction = investigationRestriction==null?InvestigationRestriction.noRestrictionInstance:investigationRestriction;
 this.textMention = textMention;
+}
+	public Manga(){
+this.individual = null;
+this.investigationRestriction = InvestigationRestriction.noRestrictionInstance;
+this.textMention = null;
 }
 
 
@@ -156,20 +168,35 @@ if (other.individual!= null)
 return false;
 } else if (!individual.equals(other.individual))
 return false;
-if (publisherCompanies == null) {
-if (other.publisherCompanies!= null)
+if (investigationRestriction == null) {
+if (other.investigationRestriction!= null)
 return false;
-} else if (!publisherCompanies.equals(other.publisherCompanies))
+} else if (!investigationRestriction.equals(other.investigationRestriction))
+return false;
+if (characterOnset == null) {
+if (other.characterOnset!= null)
+return false;
+} else if (!characterOnset.equals(other.characterOnset))
+return false;
+if (textMention == null) {
+if (other.textMention!= null)
+return false;
+} else if (!textMention.equals(other.textMention))
+return false;
+if (characterOffset == null) {
+if (other.characterOffset!= null)
+return false;
+} else if (!characterOffset.equals(other.characterOffset))
 return false;
 if (authorPersons == null) {
 if (other.authorPersons!= null)
 return false;
 } else if (!authorPersons.equals(other.authorPersons))
 return false;
-if (characterOffset == null) {
-if (other.characterOffset!= null)
+if (publisherCompanies == null) {
+if (other.publisherCompanies!= null)
 return false;
-} else if (!characterOffset.equals(other.characterOffset))
+} else if (!publisherCompanies.equals(other.publisherCompanies))
 return false;
 if (illustratorPersons == null) {
 if (other.illustratorPersons!= null)
@@ -181,20 +208,10 @@ if (other.magazines!= null)
 return false;
 } else if (!magazines.equals(other.magazines))
 return false;
-if (characterOnset == null) {
-if (other.characterOnset!= null)
-return false;
-} else if (!characterOnset.equals(other.characterOnset))
-return false;
 if (numberOfVolumes == null) {
 if (other.numberOfVolumes!= null)
 return false;
 } else if (!numberOfVolumes.equals(other.numberOfVolumes))
-return false;
-if (textMention == null) {
-if (other.textMention!= null)
-return false;
-} else if (!textMention.equals(other.textMention))
 return false;
 return true;
 }
@@ -258,14 +275,15 @@ return IMangaThing.RDF_MODEL_NAMESPACE + resourceName;}
 		final int prime = 31;
 int result = 1;
 result = prime * result + ((this.individual == null) ? 0 : this.individual.hashCode());
-result = prime * result + ((this.publisherCompanies == null) ? 0 : this.publisherCompanies.hashCode());
-result = prime * result + ((this.authorPersons == null) ? 0 : this.authorPersons.hashCode());
+result = prime * result + ((this.investigationRestriction == null) ? 0 : this.investigationRestriction.hashCode());
+result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
+result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
 result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
+result = prime * result + ((this.authorPersons == null) ? 0 : this.authorPersons.hashCode());
+result = prime * result + ((this.publisherCompanies == null) ? 0 : this.publisherCompanies.hashCode());
 result = prime * result + ((this.illustratorPersons == null) ? 0 : this.illustratorPersons.hashCode());
 result = prime * result + ((this.magazines == null) ? 0 : this.magazines.hashCode());
-result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
 result = prime * result + ((this.numberOfVolumes == null) ? 0 : this.numberOfVolumes.hashCode());
-result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
 return result;}
 	/***/
 @Override
@@ -306,7 +324,7 @@ return this;}
 
 @Override
 public String toString(){
-return "Manga [individual="+individual+",authorPersons="+authorPersons+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",illustratorPersons="+illustratorPersons+",magazines="+magazines+",numberOfVolumes="+numberOfVolumes+",publisherCompanies="+publisherCompanies+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
+return "Manga [individual="+individual+",investigationRestriction="+investigationRestriction.summarize()+",authorPersons="+authorPersons+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",illustratorPersons="+illustratorPersons+",magazines="+magazines+",numberOfVolumes="+numberOfVolumes+",publisherCompanies="+publisherCompanies+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
 
 
 }

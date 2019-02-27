@@ -23,12 +23,12 @@ import java.util.stream.Collectors;
 * @author hterhors
 *
 *
-*Nov 6, 2018
+*Dec 12, 2018
 */
 
-@ImplementationClass(get=Person.class)
-
 @AssignableSubInterfaces(get={})
+
+@ImplementationClass(get=Person.class)
  public interface IPerson
  extends IMangaThing{
 

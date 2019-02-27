@@ -2,15 +2,12 @@ package de.hterhors.obie.projects.dbpedia.examples;
 
 import java.util.List;
 
-import de.hterhors.obie.core.ontology.interfaces.IDatatype;
 import de.hterhors.obie.core.ontology.interfaces.IOBIEThing;
 import de.hterhors.obie.core.tools.corpus.OBIECorpus;
 import de.hterhors.obie.core.tools.corpus.OBIECorpus.Instance;
 import de.hterhors.obie.ml.utils.OBIEClassFormatter;
-import de.hterhors.obie.projects.dbpedia.environments.structure.StructureProjectEnvironment;
+import de.hterhors.obie.projects.dbpedia.environments.film.FilmProjectEnvironment;
 import de.hterhors.obie.projects.dbpedia.ontology.structure.classes.ArchitecturalStructure;
-import de.hterhors.obie.projects.dbpedia.ontology.structure.interfaces.IOpeningYear;
-import de.hterhors.obie.projects.dbpedia.ontology.structure.interfaces.IYearOfConstruction;
 
 /**
  * This class contains example code for loading the raw corpus file and printing
@@ -34,10 +31,21 @@ public class PrintRawCorpus {
 		 * content and annotations of the template but NO named entity recognition and
 		 * linking annotations!
 		 */
+//		final OBIECorpus rawCorpus = OBIECorpus
+//				.readRawCorpusData(DamProjectEnvironment.getInstance().getRawCorpusFile());
+//		final OBIECorpus rawCorpus = OBIECorpus
+//				.readRawCorpusData(SingleProjectEnvironment.getInstance().getRawCorpusFile());
+//		final OBIECorpus rawCorpus = OBIECorpus
+//				.readRawCorpusData(StructureProjectEnvironment.getInstance().getRawCorpusFile());
 		final OBIECorpus rawCorpus = OBIECorpus
-				.readRawCorpusData(StructureProjectEnvironment.getInstance().getRawCorpusFile());
+				.readRawCorpusData(FilmProjectEnvironment.getInstance().getRawCorpusFile());
+
+//		System.out.println(rawCorpus.getInstances().values().size());
+		int length = 0;
+//		System.exit(1);
 
 		for (Instance instance : rawCorpus.getInstances().values()) {
+			length += instance.content.length();
 
 			System.out.println("________" + instance.name + "________");
 			System.out.println(instance.content);
@@ -46,9 +54,9 @@ public class PrintRawCorpus {
 			for (List<IOBIEThing> templateAnnotations : instance.annotations.values()) {
 				for (IOBIEThing templateAnnotation : templateAnnotations) {
 
-					if (templateAnnotation instanceof ArchitecturalStructure) {
+					System.out.println(OBIEClassFormatter.format(templateAnnotation));
 
-//						System.out.println(OBIEClassFormatter.format(templateAnnotation));
+					if (templateAnnotation instanceof ArchitecturalStructure) {
 //				
 //						IDam d = (IDam) templateAnnotation;
 //
@@ -61,6 +69,7 @@ public class PrintRawCorpus {
 
 			}
 		}
+		System.out.println("Average length = " + (length / rawCorpus.getInstances().size()));
 
 	}
 }

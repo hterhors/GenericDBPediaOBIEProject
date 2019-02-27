@@ -10,16 +10,16 @@ import de.hterhors.obie.ml.run.DefaultSlotFillingRunner;
 import de.hterhors.obie.ml.run.param.RunParameter;
 import de.hterhors.obie.ml.run.param.RunParameter.Builder;
 import de.hterhors.obie.ml.tools.baseline.RandomBaseline;
-import de.hterhors.obie.projects.dbpedia.environments.structure.StructureOntologyEnvironment;
-import de.hterhors.obie.projects.dbpedia.environments.structure.StructureProjectEnvironment;
+import de.hterhors.obie.projects.dbpedia.environments.dam.DamOntologyEnvironment;
+import de.hterhors.obie.projects.dbpedia.environments.dam.DamProjectEnvironment;
 import de.hterhors.obie.projects.dbpedia.ie.parameter.DBPediaParameterQuickAccess;
-import de.hterhors.obie.projects.dbpedia.ontology.structure.interfaces.IArchitecturalStructure;
+import de.hterhors.obie.projects.dbpedia.ontology.dam.interfaces.IDam;
 
 public class ComputeRandomBaseline {
 
 	public static void main(String[] args) throws Exception {
 
-		OntologyInitializer.initializeOntology(StructureOntologyEnvironment.getInstance());
+		OntologyInitializer.initializeOntology(DamOntologyEnvironment.getInstance());
 
 		nFoldCrossValidation();
 	}
@@ -29,13 +29,13 @@ public class ComputeRandomBaseline {
 
 		long allTime = System.currentTimeMillis();
 
-		Builder paramBuilder = DBPediaParameterQuickAccess.getREParameter(IArchitecturalStructure.class);
+		Builder paramBuilder = DBPediaParameterQuickAccess.getREParameter(IDam.class);
 
 		paramBuilder.setCorpusDistributor(
 				new FoldCrossCorpusDistributor.Builder().setN(10).setSeed(12345L).setCorpusSizeFraction(1F).build());
 
-		paramBuilder.setOntologyEnvironment(StructureOntologyEnvironment.getInstance());
-		paramBuilder.setProjectEnvironment(StructureProjectEnvironment.getInstance());
+		paramBuilder.setOntologyEnvironment(DamOntologyEnvironment.getInstance());
+		paramBuilder.setProjectEnvironment(DamProjectEnvironment.getInstance());
 
 		RunParameter param = paramBuilder.build();
 		AbstractRunner runner = new DefaultSlotFillingRunner(param);

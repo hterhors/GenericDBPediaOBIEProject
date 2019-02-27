@@ -23,12 +23,12 @@ import java.util.stream.Collectors;
 * @author hterhors
 *
 *
-*Nov 6, 2018
+*Dec 12, 2018
 */
 
-@DatatypeProperty
 @AssignableSubInterfaces(get={})
 
+@DatatypeProperty
 @ImplementationClass(get=OpeningYear.class)
  public interface IOpeningYear
  extends IDamThing, IDatatype{

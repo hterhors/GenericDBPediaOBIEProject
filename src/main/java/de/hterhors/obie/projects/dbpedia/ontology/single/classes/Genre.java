@@ -15,6 +15,7 @@ import org.apache.jena.rdf.model.Resource;
 import java.util.Map;
 import java.lang.InstantiationException;
 import java.lang.SecurityException;
+import de.hterhors.obie.core.ontology.InvestigationRestriction;
 import de.hterhors.obie.core.ontology.annotations.DirectSiblings;
 import java.lang.IllegalAccessException;
 import de.hterhors.obie.core.ontology.annotations.AssignableSubClasses;
@@ -35,16 +36,16 @@ import de.hterhors.obie.core.ontology.AbstractIndividual;
 * @author hterhors
 *
 *
-*Nov 14, 2018
+*Dec 12, 2018
 */
-
-@DirectInterface(get=IGenre.class)
 
 @SuperRootClasses(get={Genre.class, })
 
-@DirectSiblings(get={})
-
 @AssignableSubClasses(get={})
+
+@DirectInterface(get=IGenre.class)
+
+@DirectSiblings(get={})
  public class Genre implements IGenre{
 
 final public static IndividualFactory<GenreIndividual> individualFactory = new IndividualFactory<>();
@@ -69,7 +70,15 @@ static class GenreIndividual extends AbstractIndividual {
 	@Override
 	public AbstractIndividual getIndividual() {
 		return individual;
-	}	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/Genre";
+	}
+	@Override
+	public InvestigationRestriction getInvestigationRestriction() {
+		return investigationRestriction;
+	}
+	@Override
+	public Genre setInvestigationRestriction(InvestigationRestriction investigationRestriction ) {
+		this.investigationRestriction = investigationRestriction;
+ return this;	}public InvestigationRestriction investigationRestriction;	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/Genre";
 	private Integer characterOffset;
 	private Integer characterOnset;
 	final static private Map<IOBIEThing, String> resourceFactory = new HashMap<>();
@@ -78,20 +87,23 @@ static class GenreIndividual extends AbstractIndividual {
 final private String textMention;
 
 
-	public Genre(){
-this.individual = null;
-this.textMention = null;
-}
-	public Genre(String individualURI, String textMention){
-this.individual = 
-				Genre.individualFactory.getIndividualByURI(individualURI);
-this.textMention = textMention;
-}
 	public Genre(Genre genre)throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,NoSuchMethodException, SecurityException{
 this.individual = genre.individual;
+this.investigationRestriction = genre.investigationRestriction;
 this.characterOffset = genre.getCharacterOffset();
 this.characterOnset = genre.getCharacterOnset();
 this.textMention = genre.getTextMention();
+}
+	public Genre(){
+this.individual = null;
+this.investigationRestriction = InvestigationRestriction.noRestrictionInstance;
+this.textMention = null;
+}
+	public Genre(String individualURI, InvestigationRestriction investigationRestriction, String textMention){
+this.individual = 
+				Genre.individualFactory.getIndividualByURI(individualURI);
+this.investigationRestriction = investigationRestriction==null?InvestigationRestriction.noRestrictionInstance:investigationRestriction;
+this.textMention = textMention;
 }
 
 
@@ -110,6 +122,16 @@ if (other.individual!= null)
 return false;
 } else if (!individual.equals(other.individual))
 return false;
+if (investigationRestriction == null) {
+if (other.investigationRestriction!= null)
+return false;
+} else if (!investigationRestriction.equals(other.investigationRestriction))
+return false;
+if (characterOnset == null) {
+if (other.characterOnset!= null)
+return false;
+} else if (!characterOnset.equals(other.characterOnset))
+return false;
 if (characterOffset == null) {
 if (other.characterOffset!= null)
 return false;
@@ -119,11 +141,6 @@ if (textMention == null) {
 if (other.textMention!= null)
 return false;
 } else if (!textMention.equals(other.textMention))
-return false;
-if (characterOnset == null) {
-if (other.characterOnset!= null)
-return false;
-} else if (!characterOnset.equals(other.characterOnset))
 return false;
 return true;
 }
@@ -167,9 +184,10 @@ return ISingleThing.RDF_MODEL_NAMESPACE + resourceName;}
 		final int prime = 31;
 int result = 1;
 result = prime * result + ((this.individual == null) ? 0 : this.individual.hashCode());
+result = prime * result + ((this.investigationRestriction == null) ? 0 : this.investigationRestriction.hashCode());
+result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
 result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
 result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
-result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
 return result;}
 	/***/
 @Override
@@ -185,7 +203,7 @@ return false;}
 
 @Override
 public String toString(){
-return "Genre [individual="+individual+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
+return "Genre [individual="+individual+",investigationRestriction="+investigationRestriction.summarize()+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",serialVersionUID="+serialVersionUID+",textMention="+textMention+"]";}
 
 
 }

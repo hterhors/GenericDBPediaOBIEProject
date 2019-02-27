@@ -15,6 +15,7 @@ import org.apache.jena.rdf.model.Resource;
 import java.util.Map;
 import java.lang.InstantiationException;
 import java.lang.SecurityException;
+import de.hterhors.obie.core.ontology.InvestigationRestriction;
 import de.hterhors.obie.core.ontology.annotations.DirectSiblings;
 import java.lang.IllegalAccessException;
 import de.hterhors.obie.core.ontology.annotations.AssignableSubClasses;
@@ -35,16 +36,16 @@ import de.hterhors.obie.core.ontology.AbstractIndividual;
 * @author hterhors
 *
 *
-*Nov 14, 2018
+*Dec 12, 2018
 */
 
 @SuperRootClasses(get={Single.class, })
 
+@AssignableSubClasses(get={})
+
 @DirectInterface(get=ISingle.class)
 
 @DirectSiblings(get={})
-
-@AssignableSubClasses(get={})
  public class Single implements ISingle{
 
 final public static IndividualFactory<SingleIndividual> individualFactory = new IndividualFactory<>();
@@ -69,9 +70,17 @@ static class SingleIndividual extends AbstractIndividual {
 	@Override
 	public AbstractIndividual getIndividual() {
 		return individual;
-	}	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/Single";
-	@RelationTypeCollection
-@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/album")
+	}
+	@Override
+	public InvestigationRestriction getInvestigationRestriction() {
+		return investigationRestriction;
+	}
+	@Override
+	public Single setInvestigationRestriction(InvestigationRestriction investigationRestriction ) {
+		this.investigationRestriction = investigationRestriction;
+ return this;	}public InvestigationRestriction investigationRestriction;	final static public String ONTOLOGY_NAME = "http://dbpedia.org/ontology/Single";
+	@OntologyModelContent(ontologyName="http://dbpedia.org/ontology/album")
+@RelationTypeCollection
 private List<IAlbum> albums = new ArrayList<>();
 	private Integer characterOffset;
 	private Integer characterOnset;
@@ -96,17 +105,9 @@ final private String textMention;
 private List<IPerson> writerPersons = new ArrayList<>();
 
 
-	public Single(String individualURI, String textMention){
-this.individual = 
-				Single.individualFactory.getIndividualByURI(individualURI);
-this.textMention = textMention;
-}
-	public Single(){
-this.individual = null;
-this.textMention = null;
-}
 	public Single(Single single)throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,NoSuchMethodException, SecurityException{
 this.individual = single.individual;
+this.investigationRestriction = single.investigationRestriction;
 for (int j = 0; j < single.getAlbums().size(); j++) {if (single.getAlbums().get(j) != null) {albums.add((IAlbum) IOBIEThing.getCloneConstructor(single.getAlbums().get(j).getClass()).newInstance(single.getAlbums().get(j)));} else {albums.add(null);}}
 this.characterOffset = single.getCharacterOffset();
 this.characterOnset = single.getCharacterOnset();
@@ -116,6 +117,17 @@ for (int j = 0; j < single.getMusicalBands().size(); j++) {if (single.getMusical
 for (int j = 0; j < single.getProducerAgents().size(); j++) {if (single.getProducerAgents().get(j) != null) {producerAgents.add((IAgent) IOBIEThing.getCloneConstructor(single.getProducerAgents().get(j).getClass()).newInstance(single.getProducerAgents().get(j)));} else {producerAgents.add(null);}}
 this.textMention = single.getTextMention();
 for (int j = 0; j < single.getWriterPersons().size(); j++) {if (single.getWriterPersons().get(j) != null) {writerPersons.add((IPerson) IOBIEThing.getCloneConstructor(single.getWriterPersons().get(j).getClass()).newInstance(single.getWriterPersons().get(j)));} else {writerPersons.add(null);}}
+}
+	public Single(String individualURI, InvestigationRestriction investigationRestriction, String textMention){
+this.individual = 
+				Single.individualFactory.getIndividualByURI(individualURI);
+this.investigationRestriction = investigationRestriction==null?InvestigationRestriction.noRestrictionInstance:investigationRestriction;
+this.textMention = textMention;
+}
+	public Single(){
+this.individual = null;
+this.investigationRestriction = InvestigationRestriction.noRestrictionInstance;
+this.textMention = null;
 }
 
 
@@ -164,45 +176,50 @@ if (other.individual!= null)
 return false;
 } else if (!individual.equals(other.individual))
 return false;
-if (characterOffset == null) {
-if (other.characterOffset!= null)
+if (investigationRestriction == null) {
+if (other.investigationRestriction!= null)
 return false;
-} else if (!characterOffset.equals(other.characterOffset))
-return false;
-if (textMention == null) {
-if (other.textMention!= null)
-return false;
-} else if (!textMention.equals(other.textMention))
+} else if (!investigationRestriction.equals(other.investigationRestriction))
 return false;
 if (characterOnset == null) {
 if (other.characterOnset!= null)
 return false;
 } else if (!characterOnset.equals(other.characterOnset))
 return false;
-if (musicalArtists == null) {
-if (other.musicalArtists!= null)
+if (characterOffset == null) {
+if (other.characterOffset!= null)
 return false;
-} else if (!musicalArtists.equals(other.musicalArtists))
-return false;
-if (genres == null) {
-if (other.genres!= null)
-return false;
-} else if (!genres.equals(other.genres))
-return false;
-if (producerAgents == null) {
-if (other.producerAgents!= null)
-return false;
-} else if (!producerAgents.equals(other.producerAgents))
+} else if (!characterOffset.equals(other.characterOffset))
 return false;
 if (albums == null) {
 if (other.albums!= null)
 return false;
 } else if (!albums.equals(other.albums))
 return false;
+if (genres == null) {
+if (other.genres!= null)
+return false;
+} else if (!genres.equals(other.genres))
+return false;
+if (musicalArtists == null) {
+if (other.musicalArtists!= null)
+return false;
+} else if (!musicalArtists.equals(other.musicalArtists))
+return false;
+if (textMention == null) {
+if (other.textMention!= null)
+return false;
+} else if (!textMention.equals(other.textMention))
+return false;
 if (musicalBands == null) {
 if (other.musicalBands!= null)
 return false;
 } else if (!musicalBands.equals(other.musicalBands))
+return false;
+if (producerAgents == null) {
+if (other.producerAgents!= null)
+return false;
+} else if (!producerAgents.equals(other.producerAgents))
 return false;
 if (writerPersons == null) {
 if (other.writerPersons!= null)
@@ -275,14 +292,15 @@ return ISingleThing.RDF_MODEL_NAMESPACE + resourceName;}
 		final int prime = 31;
 int result = 1;
 result = prime * result + ((this.individual == null) ? 0 : this.individual.hashCode());
-result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
-result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
+result = prime * result + ((this.investigationRestriction == null) ? 0 : this.investigationRestriction.hashCode());
 result = prime * result + ((this.characterOnset == null) ? 0 : this.characterOnset.hashCode());
-result = prime * result + ((this.musicalArtists == null) ? 0 : this.musicalArtists.hashCode());
-result = prime * result + ((this.genres == null) ? 0 : this.genres.hashCode());
-result = prime * result + ((this.producerAgents == null) ? 0 : this.producerAgents.hashCode());
+result = prime * result + ((this.characterOffset == null) ? 0 : this.characterOffset.hashCode());
 result = prime * result + ((this.albums == null) ? 0 : this.albums.hashCode());
+result = prime * result + ((this.genres == null) ? 0 : this.genres.hashCode());
+result = prime * result + ((this.musicalArtists == null) ? 0 : this.musicalArtists.hashCode());
+result = prime * result + ((this.textMention == null) ? 0 : this.textMention.hashCode());
 result = prime * result + ((this.musicalBands == null) ? 0 : this.musicalBands.hashCode());
+result = prime * result + ((this.producerAgents == null) ? 0 : this.producerAgents.hashCode());
 result = prime * result + ((this.writerPersons == null) ? 0 : this.writerPersons.hashCode());
 return result;}
 	/***/
@@ -329,7 +347,7 @@ return this;}
 
 @Override
 public String toString(){
-return "Single [individual="+individual+",albums="+albums+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",genres="+genres+",musicalArtists="+musicalArtists+",musicalBands="+musicalBands+",producerAgents="+producerAgents+",serialVersionUID="+serialVersionUID+",textMention="+textMention+",writerPersons="+writerPersons+"]";}
+return "Single [individual="+individual+",investigationRestriction="+investigationRestriction.summarize()+",albums="+albums+",characterOffset="+characterOffset+",characterOnset="+characterOnset+",genres="+genres+",musicalArtists="+musicalArtists+",musicalBands="+musicalBands+",producerAgents="+producerAgents+",serialVersionUID="+serialVersionUID+",textMention="+textMention+",writerPersons="+writerPersons+"]";}
 
 
 }
